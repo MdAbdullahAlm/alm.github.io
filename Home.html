@@ -31,8 +31,11 @@
     margin-bottom: 30px;
   }  
   .jumbotron {
-    background-color: #f4511e;
+    background-image: url("bg.jpg");
+    background-color: #000000;
+	background-size: 100% 900px;
     color: #fff;
+	height: 900px;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
   }
@@ -120,7 +123,7 @@
   }
   .navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: #000000;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -188,7 +191,8 @@
       font-size: 150px;
     }
   }
-  </style>
+
+  </style>  
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -215,19 +219,28 @@
 </nav>
 
 <div class="jumbotron text-center">
-  <h1>Company</h1> 
-  <p>We specialize in blablabla</p> 
- 
+
+  <h1>We are a family</h1> 
+  <p>Unity is best policy</p> 
+  <!-- <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>  -->
 </div>
+
 
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>About Company Page</h2><br>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><a href="header.html"><button class="btn btn-default btn-lg">Get in Touch</button></a>
+      <h2>About Our School</h2><br>
+      <h4>Since primary and secondary schools do not share the same characteristics of the educational process, while additional differences may emerge among grammar and vocational (secondary) schools, three separate empirical studies are planned on the topic of ‘constructivist’ principal practices in the Croatian school system. In this initial study, the practices of primary school principals are covered.</h4><br>
+      <p>Before the empirical study was conducted, two educational experts from the Croatian Scientific centre of excellence for school effectiveness and management have been asked to assess the principals’ practices, based on previous research and their insights. The work of two experts can be summarised by Table 1, which demonstrates the assessment of ‘traditional’ (non-constructivist), versus ‘contemporary’ (constructivist) practices. The obtained results are somewhat subjective since the very theoretical background (discussed in the previous section) emphasises the social constructivist nature of the ‘right’ practices selection. However, the expert assessment has been accepted by a wide range of stakeholders involved in the activities of the Croatian Scientific centre of excellence for school effectiveness and management.</p>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
@@ -242,9 +255,8 @@
     </div>
     <div class="col-sm-8">
       <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h4><strong>MISSION:</strong> The mission of the University at Buffalo School of Management is to discover and deepen our understanding of management concepts and applications that drive effective organizations and use them to produce principled and insightful leaders who create positive change in the world.</h4><br>
+      <p><strong>VISION:</strong> A world of transformational leaders and organizations who change society for the better. </p>
     </div>
   </div>
 </div>
@@ -450,13 +462,13 @@
 </div>
 
 <!-- Image of location/map -->
-<img src="map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
 
 <footer class="container-fluid text-center">
+<img src="map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
 </footer>
 
 <script>
