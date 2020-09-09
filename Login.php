@@ -1,3 +1,55 @@
+
+
+<?php
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass = "";
+ $db = "alm";
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+ 
+ return $conn;
+ }
+ 
+function CloseCon($conn)
+ {
+ $conn -> close();
+ }
+
+if (isset($_POST['Login_user'])) {
+
+$username = mysqli_real_escape_string($db, $_POST['username']);
+ $pass = mysqli_real_escape_string($db, $_POST['pass']);
+
+mysqli_select_db("alm",$conn);
+$sql="SELECT* FROM studentInfo where User_Name='$username' AND Password='$pass'";
+
+$re= mysqli_query($conn,$sql);
+$count=mysqli_num_rows($re);
+
+if($count==1)
+{
+session_start();
+$_SESSION['username'] = $u_name;
+header("location:Home.php");
+echo "user id  match";
+}
+
+else{
+echo "user id or password don't match";
+}}
+?>
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +124,8 @@
 					</div>
 
 					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn">
+						
+						<button class="login100-form-btn" type="submit" class="btn" name="Login_user">
 							Sign In
 						</button>
 					</div>
