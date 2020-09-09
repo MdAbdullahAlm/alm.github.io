@@ -82,7 +82,7 @@
 							Not a member?
 						</span>
 
-						<a href="reg.html" class="txt2 bo1">
+						<a href="reg.php" class="txt2 bo1">
 							Sign up now
 						</a>
 					</div>

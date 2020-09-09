@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style.css">
        <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Pogo Slider CSS -->
@@ -24,14 +24,13 @@
     <link rel="stylesheet" href="css/custom.css" />
     <script href="js/combobox.js"></script>
     <script href="js/fileUpload.js"></script>
-    
 </head>
 <body>
 
- <header class="top-header">
+	 <header class="top-header">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
-                   <!-- <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                   <!-- <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="image"></a>
                  
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                     <span>ALM</span>
@@ -41,28 +40,28 @@
                 <img src="img/almlogo.png" class="w3-image w3-greyscale-min" style="width:60px; height:60px;">
                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
-                        <li><a class="nav-link active" href="Home.html">Home</a></li>
+                        <li><a class="nav-link active" href="Home.php">Home</a></li>
                 
-                        <li><a class="nav-link" href="Class1To5.html">Class 1 To 5</a></li>
-                        <li><a class="nav-link" href="Class6To10.html">Class 6 To 10</a></li>
-						<li><a class="nav-link" href="Login.html">Log In</a></li>
-						<li><a class="nav-link" href="Reg.html">Register</a></li>
+                        <li><a class="nav-link" href="Class1To5.php">Class 1 To 5</a></li>
+                        <li><a class="nav-link" href="Class6To10.php">Class 6 To 10</a></li>
+						<li><a class="nav-link" href="Login.php">Log In</a></li>
+						<li><a class="nav-link" href="Reg.php">Register</a></li>
                     </ul>
                 </div>
-            
+               
             </div>
         </nav>
     </header>
-    
 
-    <div class="main">
+
+   <div class="main">
 
         <section class="signup">
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
                     <form method="POST" id="signup-form" class="signup-form">
-                        <h2 class="form-title">Admission Form Class 1 To 5</h2>
+                        <h2 class="form-title">Admission Form Class 6 To 10</h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
                         </div>

@@ -221,8 +221,8 @@
         <li><a href="#portfolio">PORTFOLIO</a></li>
         
         <li><a href="#contact">CONTACT</a></li>
-		<li><a href="Login.html">Log in</a></li>
-		<li><a href="reg.html">Register</a></li>
+		<li><a href="Login.php">Log in</a></li>
+		<li><a href="reg.php">Register</a></li>
       </ul>
     </div>
   </div>
@@ -281,7 +281,7 @@
         <div class="panel-footer">
           <h3>1</h3>
           <h4>Click for see details. </h4>
-         <a href="information.html">  <button class="btn btn-lg"> Details</button>  </a>
+         <a href="information.php">  <button class="btn btn-lg"> Details</button>  </a>
         </div>
       </div>      
     </div>     
@@ -298,7 +298,7 @@
         <div class="panel-footer">
           <h3>2</h3>
           <h4>Click for Admission. </h4>
-         <a href="Class1To5.html">  <button class="btn btn-lg">Admission</button> </a>
+         <a href="Class1To5.php">  <button class="btn btn-lg">Admission</button> </a>
         </div>
       </div>      
     </div>       
@@ -315,7 +315,7 @@
         <div class="panel-footer">
           <h3>3</h3>
           <h4>Click for Admission. </h4>
-          <a href="Class6To10.html"> <button class="btn btn-lg">Admission</button> </a>
+          <a href="Class6To10.php"> <button class="btn btn-lg">Admission</button> </a>
         </div>
       </div>      
     </div>    
@@ -496,11 +496,11 @@
 			       <div class="footer_blog footer_menu white_fonts">
 						    <h3>Quick links</h3>
 						    <ul class="list-group" > 
-							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Login.html"> Login</a></li>
-							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Reg.html"> Register</a></li>
-							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Class1To5.html"> Class 1 To 5</a></li>
-							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Class6To10.html"> Class 6 To 10</a></li>
-							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Home.html"> Home</a></li>
+							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Login.php"> Login</a></li>
+							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Reg.php"> Register</a></li>
+							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Class1To5.php"> Class 1 To 5</a></li>
+							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Class6To10.php"> Class 6 To 10</a></li>
+							  <li class="list-group-item"  style="background-color: black; border-color: Black;"><a href="Home.php"> Home</a></li>
 							</ul>
 						 </div>
 				 </div>
@@ -574,7 +574,7 @@ $(document).ready(function(){
 
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
+      $('php, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
    
@@ -598,4 +598,4 @@ $(document).ready(function(){
 </script>
 
 </body>
-</html>
+</php>
