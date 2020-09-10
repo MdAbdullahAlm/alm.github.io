@@ -66,12 +66,12 @@
                 </a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
-                        <li><a class="nav-link active" href="Home.html">Home</a></li>
+                        <li><a class="nav-link active" href="Home.php">Home</a></li>
                 
-                        <li><a class="nav-link" href="Class1To5.html">Class 1 To 5</a></li>
-                        <li><a class="nav-link" href="Class6To10.html">Class 6 To 10</a></li>
-						<li><a class="nav-link" href="Login.html">Log In</a></li>
-						<li><a class="nav-link" href="Reg.html">Register</a></li>
+                        <li><a class="nav-link" href="Class1To5.php">Class 1 To 5</a></li>
+                        <li><a class="nav-link" href="Class6To10.php">Class 6 To 10</a></li>
+						<li><a class="nav-link" href="Login.php">Log In</a></li>
+						<li><a class="nav-link" href="Reg.php">Register</a></li>
                     </ul>
                 </div>
                 <div class="search-box">
@@ -274,10 +274,10 @@ Learners can go over stuff they don't understand and repeat a lesson if necessar
 						  </p>
 						</div>
 						<div class="full">
-					           <a class="hvr-radial-out button-theme" href="Class1To5.html">Apply Class 1 To 5</a>
+					           <a class="hvr-radial-out button-theme" href="Class1To5.php">Apply Class 1 To 5</a>
 						 </div>
 						 <div class="full">
-						      <a class="hvr-radial-out button-theme" href="Class6To10.html">Apply Class 6 To 10</a>
+						      <a class="hvr-radial-out button-theme" href="Class6To10.php">Apply Class 6 To 10</a>
 						 </div>
                     </div>
                 </div>
@@ -526,11 +526,11 @@ Learners can go over stuff they don't understand and repeat a lesson if necessar
 			       <div class="footer_blog footer_menu white_fonts">
 						    <h3>Quick links</h3>
 						    <ul> 
-							  <li><a href="Login.html"> >Login</a></li>
-							  <li><a href="Reg.html"> >Register</a></li>
-							  <li><a href="Class1To5.html"> >Class 1 To 5</a></li>
-							  <li><a href="Class6To10.html"> >Class 6 To 10</a></li>
-							  <li><a href="Home.html"> >Home</a></li>
+							  <li><a href="Login.php"> >Login</a></li>
+							  <li><a href="Reg.php"> >Register</a></li>
+							  <li><a href="Class1To5.php"> >Class 1 To 5</a></li>
+							  <li><a href="Class6To10.php"> >Class 6 To 10</a></li>
+							  <li><a href="Home.php"> >Home</a></li>
 							</ul>
 						 </div>
 				 </div>
@@ -540,7 +540,7 @@ Learners can go over stuff they don't understand and repeat a lesson if necessar
 						     <h3>Newsletter</h3>
 							 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
 							 <div class="newsletter_form">
-							    <form action="index.html">
+							    <form action="index.php">
 								   <input type="email" placeholder="Your Email" name="#" required />
 								   <button>Submit</button>
 								</form>

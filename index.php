@@ -28,7 +28,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Concept</a>
+                <a class="navbar-brand" href="index.php">Concept</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -127,7 +127,7 @@
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="LogOut.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -161,38 +161,38 @@
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="index.html">E Commerce Dashboard</a>
+                                                        <a class="nav-link" href="index.php">E Commerce Dashboard</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product.html">Product List</a>
+                                                        <a class="nav-link" href="ecommerce-product.php">Product List</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
+                                                        <a class="nav-link" href="ecommerce-product-single.php">Product Single</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
+                                                        <a class="nav-link" href="ecommerce-product-checkout.php">Product Checkout</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-finance.html">Finance</a>
+                                            <a class="nav-link" href="dashboard-finance.php">Finance</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">Sales</a>
+                                            <a class="nav-link" href="dashboard-sales.php">Sales</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="dashboard-influencer.html">Influencer</a>
+                                                        <a class="nav-link" href="dashboard-influencer.php">Influencer</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
+                                                        <a class="nav-link" href="influencer-finder.php">Influencer Finder</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
+                                                        <a class="nav-link" href="influencer-profile.php">Influencer Profile</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -205,25 +205,25 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html">Cards <span class="badge badge-secondary">New</span></a>
+                                            <a class="nav-link" href="pages/cards.php">Cards <span class="badge badge-secondary">New</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/general.html">General</a>
+                                            <a class="nav-link" href="pages/general.php">General</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/carousel.html">Carousel</a>
+                                            <a class="nav-link" href="pages/carousel.php">Carousel</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/listgroup.html">List Group</a>
+                                            <a class="nav-link" href="pages/listgroup.php">List Group</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/typography.html">Typography</a>
+                                            <a class="nav-link" href="pages/typography.php">Typography</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/accordions.html">Accordions</a>
+                                            <a class="nav-link" href="pages/accordions.php">Accordions</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/tabs.html">Tabs</a>
+                                            <a class="nav-link" href="pages/tabs.php">Tabs</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -233,22 +233,22 @@
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-c3.html">C3 Charts</a>
+                                            <a class="nav-link" href="pages/chart-c3.php">C3 Charts</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-chartist.html">Chartist Charts</a>
+                                            <a class="nav-link" href="pages/chart-chartist.php">Chartist Charts</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-charts.html">Chart</a>
+                                            <a class="nav-link" href="pages/chart-charts.php">Chart</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-morris.html">Morris</a>
+                                            <a class="nav-link" href="pages/chart-morris.php">Morris</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-sparkline.html">Sparkline</a>
+                                            <a class="nav-link" href="pages/chart-sparkline.php">Sparkline</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-gauge.html">Guage</a>
+                                            <a class="nav-link" href="pages/chart-gauge.php">Guage</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -258,19 +258,19 @@
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-elements.html">Form Elements</a>
+                                            <a class="nav-link" href="pages/form-elements.php">Form Elements</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-validation.html">Parsely Validations</a>
+                                            <a class="nav-link" href="pages/form-validation.php">Parsely Validations</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/multiselect.html">Multiselect</a>
+                                            <a class="nav-link" href="pages/multiselect.php">Multiselect</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
+                                            <a class="nav-link" href="pages/datepicker.php">Date Picker</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
+                                            <a class="nav-link" href="pages/bootstrap-select.php">Bootstrap Select</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -280,10 +280,10 @@
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/general-table.html">General Tables</a>
+                                            <a class="nav-link" href="pages/general-table.php">General Tables</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/data-tables.html">Data Tables</a>
+                                            <a class="nav-link" href="pages/data-tables.php">Data Tables</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -296,46 +296,46 @@
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/blank-page.html">Blank Page</a>
+                                            <a class="nav-link" href="pages/blank-page.php">Blank Page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/blank-page-header.html">Blank Page Header</a>
+                                            <a class="nav-link" href="pages/blank-page-header.php">Blank Page Header</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/login.html">Login</a>
+                                            <a class="nav-link" href="pages/login.php">Login</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/404-page.html">404 page</a>
+                                            <a class="nav-link" href="pages/404-page.php">404 page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/sign-up.html">Sign up Page</a>
+                                            <a class="nav-link" href="pages/sign-up.php">Sign up Page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/forgot-password.html">Forgot Password</a>
+                                            <a class="nav-link" href="pages/forgot-password.php">Forgot Password</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/pricing.html">Pricing Tables</a>
+                                            <a class="nav-link" href="pages/pricing.php">Pricing Tables</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/timeline.html">Timeline</a>
+                                            <a class="nav-link" href="pages/timeline.php">Timeline</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/calendar.html">Calendar</a>
+                                            <a class="nav-link" href="pages/calendar.php">Calendar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
+                                            <a class="nav-link" href="pages/sortable-nestable-lists.php">Sortable/Nestable List</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/widgets.html">Widgets</a>
+                                            <a class="nav-link" href="pages/widgets.php">Widgets</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/media-object.html">Media Objects</a>
+                                            <a class="nav-link" href="pages/media-object.php">Media Objects</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cropper-image.html">Cropper</a>
+                                            <a class="nav-link" href="pages/cropper-image.php">Cropper</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/color-picker.html">Color Picker</a>
+                                            <a class="nav-link" href="pages/color-picker.php">Color Picker</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -345,16 +345,16 @@
                                 <div id="submenu-7" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/inbox.html">Inbox</a>
+                                            <a class="nav-link" href="pages/inbox.php">Inbox</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/email-details.html">Email Detail</a>
+                                            <a class="nav-link" href="pages/email-details.php">Email Detail</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/email-compose.html">Email Compose</a>
+                                            <a class="nav-link" href="pages/email-compose.php">Email Compose</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/message-chat.html">Message Chat</a>
+                                            <a class="nav-link" href="pages/message-chat.php">Message Chat</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -364,22 +364,22 @@
                                 <div id="submenu-8" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-fontawesome.html">FontAwesome Icons</a>
+                                            <a class="nav-link" href="pages/icon-fontawesome.php">FontAwesome Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-material.html">Material Icons</a>
+                                            <a class="nav-link" href="pages/icon-material.php">Material Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline Icon</a>
+                                            <a class="nav-link" href="pages/icon-simple-lineicon.php">Simpleline Icon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-themify.html">Themify Icon</a>
+                                            <a class="nav-link" href="pages/icon-themify.php">Themify Icon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-flag.html">Flag Icons</a>
+                                            <a class="nav-link" href="pages/icon-flag.php">Flag Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-weather.html">Weather Icon</a>
+                                            <a class="nav-link" href="pages/icon-weather.php">Weather Icon</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -389,10 +389,10 @@
                                 <div id="submenu-9" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/map-google.html">Google Maps</a>
+                                            <a class="nav-link" href="pages/map-google.php">Google Maps</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/map-vector.html">Vector Maps</a>
+                                            <a class="nav-link" href="pages/map-vector.php">Vector Maps</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -866,92 +866,15 @@
                         <div class="row">
                             <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <!-- ============================================================== -->
-                                <!-- social source  -->
-                                <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header"> Sales By Social Source</h5>
-                                    <div class="card-body p-0">
-                                        <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Facebook</span><span class="social-sales-count text-dark">120 Sales</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Twitter</span><span class="social-sales-count text-dark">99 Sales</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Instagram</span><span class="social-sales-count text-dark">76 Sales</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Pinterest</span><span class="social-sales-count text-dark">56 Sales</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Google Plus</span><span class="social-sales-count text-dark">36 Sales</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                                <!-- ============================================================== -->
-                                <!-- end social source  -->
+                                
                                 <!-- ============================================================== -->
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <!-- ============================================================== -->
-                                <!-- sales traffice source  -->
-                                <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header"> Sales By Traffic Source</h5>
-                                    <div class="card-body p-0">
-                                        <ul class="traffic-sales list-group list-group-flush">
-                                            <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Direct</span><span class="traffic-sales-amount">$4000.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Search<span class="traffic-sales-amount">$3123.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Social<span class="traffic-sales-amount ">$3099.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Referrals<span class="traffic-sales-amount ">$2220.00   <span class="icon-circle-small icon-box-xs text-danger ml-4 bg-danger-light"><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1 text-danger">4.02%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Email<span class="traffic-sales-amount">$1567.00   <span class="icon-circle-small icon-box-xs text-danger ml-4 bg-danger-light"><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1 text-danger">3.86%</span></span>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end sales traffice source  -->
+                                
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
-                            <!-- sales traffic country source  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Sales By Country Traffic Source</h5>
-                                    <div class="card-body p-0">
-                                        <ul class="country-sales list-group list-group-flush">
-                                            <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
-                                                <span class="">United States</span><span class="float-right text-dark">78%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ca" title="ca" id="ca"></i></span><span class="">Canada</span><span class="float-right text-dark">7%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ru" title="ru" id="ru"></i></span><span class="">Russia</span><span class="float-right text-dark">4%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-in" title="in" id="in"></i></span><span class="">India</span><span class="float-right text-dark">12%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i></span><span class="">France</span><span class="float-right text-dark">16%</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end sales traffice country source  -->
+                            
                             <!-- ============================================================== -->
                         </div>
                     </div>

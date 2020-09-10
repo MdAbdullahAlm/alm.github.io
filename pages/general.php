@@ -23,7 +23,7 @@
         <!-- ============================================================== -->
           <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../index.html">Concept</a>
+                <a class="navbar-brand" href="../index.php">Concept</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -152,42 +152,42 @@
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="index.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+                                            <a class="nav-link" href="index.php" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../index.html">E Commerce Dashboard</a>
+                                                        <a class="nav-link" href="../index.php">E Commerce Dashboard</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../ecommerce-product.html">Product List</a>
+                                                        <a class="nav-link" href="../ecommerce-product.php">Product List</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../ecommerce-product-single.html">Product Single</a>
+                                                        <a class="nav-link" href="../ecommerce-product-single.php">Product Single</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../ecommerce-product-checkout.html">Product Checkout</a>
+                                                        <a class="nav-link" href="../ecommerce-product-checkout.php">Product Checkout</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../dashboard-finance.html">Finance</a>
+                                            <a class="nav-link" href="../dashboard-finance.php">Finance</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../dashboard-sales.html">Sales</a>
+                                            <a class="nav-link" href="../dashboard-sales.php">Sales</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../dashboard-influencer.html">Influencer</a>
+                                                        <a class="nav-link" href="../dashboard-influencer.php">Influencer</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../influencer-finder.html">Influencer Finder</a>
+                                                        <a class="nav-link" href="../influencer-finder.php">Influencer Finder</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../influencer-profile.html">Influencer Profile</a>
+                                                        <a class="nav-link" href="../influencer-profile.php">Influencer Profile</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -200,25 +200,25 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="cards.html">Cards <span class="badge badge-secondary">New</span></a>
+                                            <a class="nav-link" href="cards.php">Cards <span class="badge badge-secondary">New</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="general.html">General</a>
+                                            <a class="nav-link" href="general.php">General</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="carousel.html">Carousel</a>
+                                            <a class="nav-link" href="carousel.php">Carousel</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="listgroup.html">List Group</a>
+                                            <a class="nav-link" href="listgroup.php">List Group</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="typography.html">Typography</a>
+                                            <a class="nav-link" href="typography.php">Typography</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="accordions.html">Accordions</a>
+                                            <a class="nav-link" href="accordions.php">Accordions</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="tabs.html">Tabs</a>
+                                            <a class="nav-link" href="tabs.php">Tabs</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -228,22 +228,22 @@
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-c3.html">C3 Charts</a>
+                                            <a class="nav-link" href="chart-c3.php">C3 Charts</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-chartist.html">Chartist Charts</a>
+                                            <a class="nav-link" href="chart-chartist.php">Chartist Charts</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-charts.html">Chart</a>
+                                            <a class="nav-link" href="chart-charts.php">Chart</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-morris.html">Morris</a>
+                                            <a class="nav-link" href="chart-morris.php">Morris</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-sparkline.html">Sparkline</a>
+                                            <a class="nav-link" href="chart-sparkline.php">Sparkline</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="chart-gauge.html">Guage</a>
+                                            <a class="nav-link" href="chart-gauge.php">Guage</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -253,13 +253,13 @@
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="form-elements.html">Form Elements</a>
+                                            <a class="nav-link" href="form-elements.php">Form Elements</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="form-validation.html">Parsely Validations</a>
+                                            <a class="nav-link" href="form-validation.php">Parsely Validations</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="multiselect.html">Multiselect</a>
+                                            <a class="nav-link" href="multiselect.php">Multiselect</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -269,10 +269,10 @@
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="general-table.html">General Tables</a>
+                                            <a class="nav-link" href="general-table.php">General Tables</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="data-tables.html">Data Tables</a>
+                                            <a class="nav-link" href="data-tables.php">Data Tables</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -285,49 +285,49 @@
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="invoice.html">Invoice</a>
+                                            <a class="nav-link" href="invoice.php">Invoice</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="blank-page.html">Blank Page</a>
+                                            <a class="nav-link" href="blank-page.php">Blank Page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="blank-page-header.html">Blank Page Header</a>
+                                            <a class="nav-link" href="blank-page-header.php">Blank Page Header</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="login.php">Login</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="404-page.html">404 page</a>
+                                            <a class="nav-link" href="404-page.php">404 page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="sign-up.html">Sign up Page</a>
+                                            <a class="nav-link" href="sign-up.php">Sign up Page</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="forgot-password.html">Forgot Password</a>
+                                            <a class="nav-link" href="forgot-password.php">Forgot Password</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pricing.html">Pricing Tables</a>
+                                            <a class="nav-link" href="pricing.php">Pricing Tables</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="timeline.html">Timeline</a>
+                                            <a class="nav-link" href="timeline.php">Timeline</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="calendar.html">Calendar</a>
+                                            <a class="nav-link" href="calendar.php">Calendar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="sortable-nestable-lists.html">Sortable/Nestable List</a>
+                                            <a class="nav-link" href="sortable-nestable-lists.php">Sortable/Nestable List</a>
                                         </li>
                                        <li class="nav-item">
-                                            <a class="nav-link" href="widgets.html">Widgets</a>
+                                            <a class="nav-link" href="widgets.php">Widgets</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="media-object.html">Media Objects</a>
+                                            <a class="nav-link" href="media-object.php">Media Objects</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="cropper-image.html">Cropper</a>
+                                            <a class="nav-link" href="cropper-image.php">Cropper</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="color-picker.html">Color Picker</a>
+                                            <a class="nav-link" href="color-picker.php">Color Picker</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -337,16 +337,16 @@
                                 <div id="submenu-7" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="inbox.html">Inbox</a>
+                                            <a class="nav-link" href="inbox.php">Inbox</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="email-details.html">Email Detail</a>
+                                            <a class="nav-link" href="email-details.php">Email Detail</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="email-compose.html">Email Compose</a>
+                                            <a class="nav-link" href="email-compose.php">Email Compose</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="message-chat.html">Message Chat</a>
+                                            <a class="nav-link" href="message-chat.php">Message Chat</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -356,22 +356,22 @@
                                 <div id="submenu-8" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-fontawesome.html">FontAwesome Icons</a>
+                                            <a class="nav-link" href="icon-fontawesome.php">FontAwesome Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-material.html">Material Icons</a>
+                                            <a class="nav-link" href="icon-material.php">Material Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-simple-lineicon.html">Simpleline Icon</a>
+                                            <a class="nav-link" href="icon-simple-lineicon.php">Simpleline Icon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-themify.html">Themify Icon</a>
+                                            <a class="nav-link" href="icon-themify.php">Themify Icon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-flag.html">Flag Icons</a>
+                                            <a class="nav-link" href="icon-flag.php">Flag Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="icon-weather.html">Weather Icon</a>
+                                            <a class="nav-link" href="icon-weather.php">Weather Icon</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -381,10 +381,10 @@
                                 <div id="submenu-9" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="map-google.html">Google Maps</a>
+                                            <a class="nav-link" href="map-google.php">Google Maps</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="map-vector.html">Vector Maps</a>
+                                            <a class="nav-link" href="map-vector.php">Vector Maps</a>
                                         </li>
                                     </ul>
                                 </div>
