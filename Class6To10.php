@@ -37,7 +37,7 @@ $link= mysqli_connect("localhost", "root", "");
 mysqli_select_db($link,"alm");
 
 
-   $sql="INSERT INTO class1to5 (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `previousSchool`, `email`, `file`, `teamService`, `userId`, `entryTime`) VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$email','$class','$PreviousSchool','$fileToUpload','$Agterm','$userIp',CURRENT_TIMESTAMP)";
+   $sql="INSERT INTO class6to10 (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `previousSchool`, `email`, `file`, `teamService`, `userId`, `entryTime`) VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$email','$class','$PreviousSchool','$fileToUpload','$Agterm','$userIp',CURRENT_TIMESTAMP)";
 
 
 $re= mysqli_query($link,$sql);
@@ -46,7 +46,7 @@ $count=mysqli_num_rows($re);
 
 session_start();
 $_SESSION['username'] = $u_name;
-header("location:Home.php");
+header("location:confirmationMsg.php");
 
 }
 ?>
@@ -148,11 +148,11 @@ header("location:Home.php");
                               <div class="row">
 							    <div class="col-sm-3">
 							      <select class="form-control" >
-							        <option value="Class 1">Class 1</option>
-							        <option value="Class 2">Class 2</option>
-							        <option value="Class 3">Class 3</option>
-							        <option value="Class 2">Class 4</option>
-							        <option value="Class 3">Class 5</option>
+							        <option value="Class 6">Class 6</option>
+							        <option value="Class 7">Class 7</option>
+							        <option value="Class 8">Class 8</option>
+							        <option value="Class 9">Class 9</option>
+							        <option value="Class 10">Class 10</option>
 							      </select>
 							    </div>
 							  </div>

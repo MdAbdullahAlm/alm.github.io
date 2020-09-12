@@ -45,7 +45,7 @@ $count=mysqli_num_rows($re);
 
 session_start();
 $_SESSION['username'] = $u_name;
-header("location:Home.php");
+header("location:confirmationMsg.php");
 
 }
 ?>
