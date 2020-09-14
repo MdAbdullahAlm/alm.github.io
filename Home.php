@@ -1,3 +1,49 @@
+<?php
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass = "";
+ $db = "alm";
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+ 
+ return $conn;
+ }
+ 
+function CloseCon($conn)
+ {
+ $conn -> close();
+ }
+
+
+	
+if (isset($_POST['submit'])) {
+
+$userName=$_POST['name'];
+$email=$_POST['email'];
+$comments=$_POST['comments'];
+
+$link= mysqli_connect("localhost", "root", "");
+
+mysqli_select_db($link,"alm");
+
+   $sql="INSERT INTO tbcontact( `User_Name`, `email`, `Comment`, `entryTime`) VALUES ('$userName','$email','$comments',CURRENT_TIMESTAMP)";
+
+
+$re= mysqli_query($link,$sql);
+$count=mysqli_num_rows($re);
+
+
+session_start();
+$_SESSION['username'] = $u_name;
+
+header("location:#about");
+
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -450,6 +496,8 @@
       <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
       <p><span class="glyphicon glyphicon-envelope"></span> alm108187@gmail.com</p>
     </div>
+	
+	<form method="POST" id="signup-form" class="signup-form">
     <div class="col-sm-7 slideanim">
       <div class="row">
         <div class="col-sm-6 form-group">
@@ -462,10 +510,11 @@
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+          <button class="btn btn-default pull-right" type="submit" name="submit" id="submit">Send</button>
         </div>
       </div>
     </div>
+	</form>
   </div>
 </div>
 
@@ -510,9 +559,9 @@
 						     <h3>Newsletter</h3>
 							 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
 							 <div class="newsletter_form">
-							    <form action="index.html">
-								   <input type="email" placeholder="Your Email" name="#" required />
-								   <button>Submit</button>
+							    <form action="Home.php" method="POST" id="signup-form" class="signup-form">
+								   <input type="email" placeholder="Your Email"  id="email" name="email" required />
+								   <button class="btn btn-default pull-right" type="submit" name="submit" id="submit">Submit</button>
 								</form>
 							 </div>
 						 </div>
