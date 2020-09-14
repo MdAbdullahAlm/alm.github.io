@@ -1,3 +1,61 @@
+<?php
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass = "";
+ $db = "alm";
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+ 
+ return $conn;
+ }
+ 
+function CloseCon($conn)
+ {
+ $conn -> close();
+ }
+
+
+	
+if (isset($_POST['submit'])) {
+
+$userName=$_POST['name'];
+$Father=$_POST['Fathername'];
+$Mother=$_POST['Mothername'];
+$PermanentAddress=$_POST['PermanentAddress'];
+$MobileNumber=$_POST['MobileNumber'];
+$PresentAddress=$_POST['PresentAddress'];
+$email=$_POST['email'];
+$class=$_POST['class'];
+$PreviousSchool=$_POST['PreviousSchool'];
+$fileToUpload=$_POST['fileToUpload'];
+$Agterm=$_POST['Agterm'];
+$userIp= "";
+
+$link= mysqli_connect("localhost", "root", "");
+
+mysqli_select_db($link,"alm");
+
+   $sql="INSERT INTO class1to5 (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `previousSchool`, `email`, `file`, `teamService`, `userId`, `entryTime`) VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$email','$class','$PreviousSchool','$fileToUpload','$Agterm','$userIp',CURRENT_TIMESTAMP)";
+
+
+$re= mysqli_query($link,$sql);
+$count=mysqli_num_rows($re);
+
+
+session_start();
+$_SESSION['username'] = $u_name;
+header("location:confirmationMsg.php");
+
+}
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +89,7 @@
  <header class="top-header">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
-                   <!-- <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                   <!-- <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="image"></a>
                  
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                     <span>ALM</span>
@@ -41,12 +99,12 @@
                 <img src="img/almlogo.png" class="w3-image w3-greyscale-min" style="width:60px; height:60px;">
                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
-                        <li><a class="nav-link active" href="Home.html">Home</a></li>
+                        <li><a class="nav-link active" href="Home.php">Home</a></li>
                 
-                        <li><a class="nav-link" href="Class1To5.html">Class 1 To 5</a></li>
-                        <li><a class="nav-link" href="Class6To10.html">Class 6 To 10</a></li>
-						<li><a class="nav-link" href="Login.html">Log In</a></li>
-						<li><a class="nav-link" href="Reg.html">Register</a></li>
+                        <li><a class="nav-link" href="Class1To5.php">Class 1 To 5</a></li>
+                        <li><a class="nav-link" href="Class6To10.php">Class 6 To 10</a></li>
+						<li><a class="nav-link" href="Login.php">Log In</a></li>
+						<li><a class="nav-link" href="Reg.php">Register</a></li>
                     </ul>
                 </div>
             
@@ -80,12 +138,12 @@
                         </div>
 						<div class="form-group">
                             <input type="text" class="form-input" name="MobileNumber" id="MobileNumber" placeholder="Mobile Number"/>
-                        </div>
+                        </div>   
                         <div class="form-group">
                               <p> Which class you are want to admission?</p>
                               <div class="row">
 							    <div class="col-sm-3">
-							      <select class="form-control" >
+							      <select class="form-control" name="class">
 							        <option value="Class 1">Class 1</option>
 							        <option value="Class 2">Class 2</option>
 							        <option value="Class 3">Class 3</option>
@@ -106,12 +164,12 @@
                         <div class="form-group">
                         <p> Upload Students Picture</p>
 		                        <div class="file-upload-wrapper">
-								  <input type="file" id="input-file-max-fs" class="file-upload" data-max-file-size="2M" />
+								  <input type="file" id="input-file-max-fs" name="fileToUpload" class="file-upload" data-max-file-size="2M" />
 								</div>
                           </div> 
                         
                         <div class="form-group">
-                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <input type="checkbox" name="Agterm" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>
                         <div class="form-group">

@@ -1,3 +1,55 @@
+
+<?php
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass = "";
+ $db = "alm";
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+ 
+ return $conn;
+ }
+ 
+function CloseCon($conn)
+ {
+ $conn -> close();
+ }
+
+	
+if (isset($_POST['sbt'])) {
+
+$userName=$_POST['user'];
+$pass=$_POST['pass'];
+$link= mysqli_connect("localhost", "root", "");
+
+mysqli_select_db($link,"alm");
+$sql="SELECT* FROM tbreginfo where User_Name='$userName' AND Password='$pass'";
+
+$re= mysqli_query($link,$sql);
+$count=mysqli_num_rows($re);
+
+if($count==1)
+{
+session_start();
+$_SESSION['username'] = $u_name;
+header("location:index.php");
+echo "user id  match";
+}
+
+else{
+echo "user id or password don't match";
+}}
+	
+
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +84,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-				<form class="login100-form validate-form flex-sb flex-w">
+				<form class="login100-form validate-form flex-sb flex-w" action="login.php" method="post">
 					<span class="login100-form-title p-b-53">
 						Sign In With
 					</span>
@@ -53,7 +105,7 @@
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Username is required">
-						<input class="input100" type="text" name="username" >
+						<input class="input100" type="text" name="user" >
 						<span class="focus-input100"></span>
 					</div>
 					
@@ -72,7 +124,8 @@
 					</div>
 
 					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn">
+						
+						<button class="login100-form-btn" name="sbt">
 							Sign In
 						</button>
 					</div>
@@ -82,7 +135,7 @@
 							Not a member?
 						</span>
 
-						<a href="reg.html" class="txt2 bo1">
+						<a href="reg.php" class="txt2 bo1">
 							Sign up now
 						</a>
 					</div>
@@ -113,3 +166,22 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+        
+		 
+		 
+		 
+		 
+		 
+		 
+
+ 
