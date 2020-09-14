@@ -1,7 +1,13 @@
 <?php
-if(!isset($_SESSION['username'])){
-   header("location:Home.php");  
-}
+ session_start();
+
+  if(!(isset($_SESSION["Login"]) && $_SESSION["Login"] == "OK")) {
+    header("Location: Home.php");
+    
+}	
+	 
+
+
 ?>
 
 <!doctype html>

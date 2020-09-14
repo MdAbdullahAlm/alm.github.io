@@ -32,6 +32,7 @@ $count=mysqli_num_rows($re);
 if($count==1)
 {
 session_start();
+$_SESSION["Login"] = "OK";
 $_SESSION['username'] = $u_name;
 header("location:index.php");
 echo "user id  match";
