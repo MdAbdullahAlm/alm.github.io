@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2020 at 09:44 AM
+-- Generation Time: Sep 16, 2020 at 07:46 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.3.20
 
@@ -135,6 +135,50 @@ CREATE TABLE `programinfo` (
 
 INSERT INTO `programinfo` (`autoId`, `programName`, `Place`, `SchdeuleDate`, `Buget`, `Liability by`, `mobile`, `userIp`, `entryTime`) VALUES
 (1, 'alm birthday', 'ctg', '2020-10-07', 100, 'alm', '0163434', '', '2020-09-15 13:06:04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `result`
+--
+
+CREATE TABLE `result` (
+  `autoId` int(250) NOT NULL,
+  `Student_Name` varchar(250) NOT NULL,
+  `Class` varchar(250) NOT NULL,
+  `Roll` int(100) NOT NULL,
+  `B1rst` int(211) NOT NULL,
+  `B2rst` int(211) NOT NULL,
+  `E1rst` int(211) NOT NULL,
+  `E2rst` int(221) NOT NULL,
+  `Mrst` int(222) NOT NULL,
+  `Rrst` int(222) NOT NULL,
+  `ssrst` int(222) NOT NULL,
+  `srst` int(222) NOT NULL,
+  `Irst` int(222) NOT NULL,
+  `Biology` int(222) NOT NULL,
+  `Physics` int(222) NOT NULL,
+  `chemistry` int(222) NOT NULL,
+  `HigerMath` int(222) NOT NULL,
+  `Art` int(111) NOT NULL,
+  `exs1` varchar(111) NOT NULL,
+  `exs1rst` int(111) NOT NULL,
+  `exs2` varchar(111) NOT NULL,
+  `exs2rst` int(111) NOT NULL,
+  `exs3` varchar(111) NOT NULL,
+  `exs3rst` int(111) NOT NULL,
+  `exs4` varchar(111) NOT NULL,
+  `exs4rst` int(111) NOT NULL,
+  `userIp` varchar(111) NOT NULL,
+  `entryTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `result`
+--
+
+INSERT INTO `result` (`autoId`, `Student_Name`, `Class`, `Roll`, `B1rst`, `B2rst`, `E1rst`, `E2rst`, `Mrst`, `Rrst`, `ssrst`, `srst`, `Irst`, `Biology`, `Physics`, `chemistry`, `HigerMath`, `Art`, `exs1`, `exs1rst`, `exs2`, `exs2rst`, `exs3`, `exs3rst`, `exs4`, `exs4rst`, `userIp`, `entryTime`) VALUES
+(1, 'korim', 'Class 9', 4, 45, 56, 54, 54, 56, 32, 45, 58, 78, 54, 56, 34, 34, 56, 'df', 65, 'sx', 66, 'zs', 67, 'e', 43, '', '2020-09-16 11:44:41');
 
 -- --------------------------------------------------------
 
@@ -329,6 +373,12 @@ ALTER TABLE `programinfo`
   ADD PRIMARY KEY (`autoId`);
 
 --
+-- Indexes for table `result`
+--
+ALTER TABLE `result`
+  ADD PRIMARY KEY (`autoId`);
+
+--
 -- Indexes for table `staffinfo`
 --
 ALTER TABLE `staffinfo`
@@ -391,6 +441,12 @@ ALTER TABLE `examschdeule`
 --
 ALTER TABLE `programinfo`
   MODIFY `autoId` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `result`
+--
+ALTER TABLE `result`
+  MODIFY `autoId` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `staffinfo`

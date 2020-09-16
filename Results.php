@@ -10,13 +10,32 @@
 		if (isset($_POST['submit'])) {
 
 $userName=$_POST['name'];
-$Father=$_POST['Fathername'];
-$Mother=$_POST['Mothername'];
-$PermanentAddress=$_POST['PermanentAddress'];
-$MobileNumber=$_POST['MobileNumber'];
-$PresentAddress=$_POST['PresentAddress'];
-$email=$_POST['email'];
 $class=$_POST['class'];
+$Roll=$_POST['roll'];
+$B1rst=$_POST['B1rst'];
+$B2rst=$_POST['B2rst'];
+$E1rst=$_POST['E1rst'];
+$E2rst=$_POST['E2rst'];
+$Mrst=$_POST['Mrst'];
+$Rrst=$_POST['Rrst'];
+$ssrst=$_POST['ssrst'];
+$srst=$_POST['srst'];
+$Irst=$_POST['Irst'];
+
+$Biorst=$_POST['Biorst'];
+$Phyrst=$_POST['Pyrst'];
+$Chrst=$_POST['Chrst'];
+$Hmrst=$_POST['Hmrst'];
+$Arst=$_POST['Arst'];
+$exs1=$_POST['exs1'];
+$exs1rst=$_POST['exs1rst'];
+$exs2=$_POST['exs2'];
+$exs2rst=$_POST['exs2rst'];
+$exs3=$_POST['exs3'];
+$exs3rst=$_POST['exs3rst'];
+$exs4=$_POST['exs4'];
+$exs4rst=$_POST['exs4rst'];
+
 $fileToUpload=$_POST['fileToUpload'];
 $userIp= "";
 
@@ -24,14 +43,20 @@ $link= mysqli_connect("localhost", "root", "");
 
 mysqli_select_db($link,"alm");
 
-$CQSql=" Select studentName,fatherName,motherName,class,MobileNumber from StudentInfo where studentName= '$userName' and fatherName ='$Father' and motherName='$Mother' and class='$class' and MobileNumber='$MobileNumber'";
+$CQSql=" Select Student_Name,Roll from result 
+where Student_Name= '$userName' and Roll ='$Roll'";
+
 $re1= mysqli_query($link,$CQSql);
 $count=mysqli_num_rows($re1);
 if($count > 0) {
-	echo "alert $name already exists";
+	echo "alert $Roll already exists";
 }
 else{
-   $sql="INSERT INTO StudentInfo (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `email`, `file`,  `userId`, `entryTime`) VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$email','$class','$fileToUpload','$userIp',CURRENT_TIMESTAMP)";
+   $sql="INSERT INTO `result`( `Student_Name`, `Class`, `Roll`, `B1rst`, `B2rst`, `E1rst`, `E2rst`, `Mrst`,
+   `Rrst`, `ssrst`, `srst`, `Irst`, `Biology`, `Physics`, `chemistry`, `HigerMath`, `Art`,
+   `exs1`, `exs1rst`, `exs2`, `exs2rst`, `exs3`, `exs3rst`, `exs4`, `exs4rst`, `userIp`, `entryTime`) 
+   VALUES ('$userName','$class','$Roll','$B1rst','$B2rst','$E1rst','$E1rst','$Mrst','$Rrst','$ssrst','$srst','$Irst','$Biorst',
+   '$Phyrst','$Chrst','$Hmrst','$Arst','$exs1','$exs1rst','$exs2','$exs2rst','$exs3','$exs3rst','$exs4','$exs4rst','',CURRENT_TIMESTAMP)";
 $re= mysqli_query($link,$sql);
 
 echo '<script>alert("Sucssesfully Done")</script>'; 
@@ -118,60 +143,175 @@ echo '<script>alert("Sucssesfully Done")</script>';
 										<div class="signup-content">
 											<form method="POST" id="signup-form" class="signup-form">
 												<h2 class="form-title"> Entry Student Result</h2>
+												
 												<div class="form-group">
-													<input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
-												</div>
-												<div class="form-group">
-													  <p> Which class?</p>
 													  <div class="row">
+													  <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
+														<p> Which class?</p>
 														<div class="col-sm-3">
 														  <select class="form-control" name="class">
 															<option value="Class 1">Class 1</option>
 															<option value="Class 2">Class 2</option>
 															<option value="Class 3">Class 3</option>
-															<option value="Class 2">Class 4</option>
-															<option value="Class 3">Class 5</option>
-															<option value="Class 1">Class 6</option>
-															<option value="Class 2">Class 7</option>
-															<option value="Class 3">Class 8</option>
-															<option value="Class 2">Class 9</option>
-															<option value="Class 3">Class 10</option>
-															<option value="Class 3">SCC Exam</option>
+															<option value="Class 4">Class 4</option>
+															<option value="Class 5">Class 5</option>
+															<option value="Class 6">Class 6</option>
+															<option value="Class 7">Class 7</option>
+															<option value="Class 8">Class 8</option>
+															<option value="Class 9">Class 9</option>
+															<option value="Class 10">Class 10</option>
+															<option value="SCC Exam">SCC Exam</option>
 														  </select>
 														</div>
-														<input type="text" class="form-input" name="Fathername" id="Fathername" placeholder="Roll"/>
+														<input type="text" class="form-input" name="roll" id="roll" placeholder="Roll"/>
 													  </div>
 													 	
 												</div>
 												<div class="form-group">
-													<input type="text" class="form-input" name="Fathername" id="Fathername" placeholder="Father Name"/>
+												   
+													  <h4 class="form-title"><pre> Entry Subject Name          Entry Roll Name</pre></h4>
+													
 												</div>
 												<div class="form-group">
-													<input type="text" class="form-input" name="Mothername" id="Mothername" placeholder="Mother Name"/>
+												   <div class="row">
+													<div class="col-sm-3">
+														<select class="form-control" name="sub1"> <option value="Bangla 1st">Bangla 1st</option> </select>
+														
+													</div>
+													<input type="text" class="form-input" name="B1rst" id="B1rst" placeholder="Result"/>
+												   </div>
 												</div>
 												<div class="form-group">
-													<input type="text" class="form-input" name="PresentAddress" id="PresentAddress" placeholder="Present Address"/>
-												</div>
-												<div class="form-group">
-													<input type="text" class="form-input" name="PermanentAddress" id="PermanentAddress" placeholder="Permanent Address"/>
-												</div>
-												<div class="form-group">
-													<input type="text" class="form-input" name="MobileNumber" id="MobileNumber" placeholder="Mobile Number"/>
-												</div>   
-												
-											
-												<div class="form-group">
-													<input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
-												</div>
-												
-												<div class="form-group">
-												<p> Upload Students Picture</p>
-														<div class="file-upload-wrapper">
-														  <input type="file" id="input-file-max-fs" name="fileToUpload" class="file-upload" data-max-file-size="2M" />
+												 <div class="row">
+													<div class="col-sm-3">
+														<select class="form-control" name="sub2"> <option value="Bangla 2nd">Bangla 2nd</option> </select>
 														</div>
-												  </div> 
-												</br>
+														<input type="text" class="form-input" name="B2rst" id="B2rst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													  <select class="form-control" name="sub3"> <option value="English 1st">English 1st</option></select>
+													  </div>
+													  <input type="text" class="form-input" name="E1rst" id="E1rst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													  <select class="form-control" name="sub4"> <option value="English 2nd">English 2nd</option></select>
+													  </div>
+													  <input type="text" class="form-input" name="E2rst" id="E2rst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub5"> <option value="Math">Math</option> </select>
+													</div>
+													<input type="text" class="form-input" name="Mrst" id="Mrst" placeholder="Result"/>
+												</div>   
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub6"> <option value="Relagion">Relagion</option> </select>
+													</div>
+													<input type="text" class="form-input" name="Rrst" id="Rrst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub7"> <option value="S.S">S.S</option> </select>
+													</div>
+													<input type="text" class="form-input" name="ssrst" id="ssrst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub8"><option value="Science">Science</option> </select>
+													</div>
+													<input type="text" class="form-input" name="srst" id="srst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub9"> <option value="ICT">ICT</option> </select>
+													</div>
+													<input type="text" class="form-input" name="Irst" id="Irst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub10"> <option value="Biology">Biology</option> </select>
+													</div>
+													<input type="text" class="form-input" name="Biorst" id="Biorst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub11"> <option value="Physics">Physics</option> </select>
+													</div>
+													<input type="text" class="form-input" name="Pyrst" id="Pyrst" placeholder="Result"/>
+												</div>   
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub12"> <option value="chemistry">chemistry</option> </select>
+													</div>
+													<input type="text" class="form-input" name="Chrst" id="Chrst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub13"> <option value="HigerMath">Higer Math</option> </select>
+													</div>
+													<input type="text" class="form-input" name="Hmrst" id="Hmrst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<div class="col-sm-3">
+													<select class="form-control" name="sub14"> <option value="Art">Art</option> </select>
+													</div>
+													<input type="text" class="form-input" name="Arst" id="Arst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													
+													<input type="text" class="form-input" name="exs1" id="exs1" placeholder="Another Subject"/>
+													<input type="text" class="form-input" name="exs1rst" id="exs1rst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<input type="text" class="form-input" name="exs2" id="exs2" placeholder="Another Subject"/>
+													<input type="text" class="form-input" name="exs2rst" id="exs2rst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<input type="text" class="form-input" name="exs3" id="exs3" placeholder="Another Subject"/>
+													<input type="text" class="form-input" name="exs3rst" id="exs3rst" placeholder="Result"/>
+												</div>
+												</div>
+												<div class="form-group">
+												 <div class="row">
+													<input type="text" class="form-input" name="exs4" id="exs4" placeholder="Another Subject"/>
+													<input type="text" class="form-input" name="exs4rst" id="exs4rst" placeholder="Result"/>
+												</div> 
+												</div>												
 												
+					
 												<div class="form-group">
 													<input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
 												</div>
