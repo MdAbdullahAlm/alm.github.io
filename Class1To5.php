@@ -36,7 +36,8 @@ $link= mysqli_connect("localhost", "root", "");
 
 mysqli_select_db($link,"alm");
 
-   $sql="INSERT INTO class1to5 (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `previousSchool`, `email`, `file`, `teamService`, `userId`, `entryTime`) VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$email','$class','$PreviousSchool','$fileToUpload','$Agterm','$userIp',CURRENT_TIMESTAMP)";
+   $sql="INSERT INTO class1to5 (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `previousSchool`, `email`, `file`, `teamService`, `userId`, `entryTime`)
+   VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$class','$PreviousSchool','$email','$fileToUpload','$Agterm','$userIp',CURRENT_TIMESTAMP)";
 
 
 $re= mysqli_query($link,$sql);
