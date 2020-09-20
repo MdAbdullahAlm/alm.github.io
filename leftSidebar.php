@@ -51,13 +51,13 @@
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-c3.php">Class Students</a>
+                                            <a class="nav-link" href="RptClassStudents.php">Class Students</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-chartist.php">Teachers</a>
+                                            <a class="nav-link" href="RptTeachers.php">Teachers</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-charts.php">Staff</a>
+                                            <a class="nav-link" href="RptStaff.php">Staff</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/chart-morris.php">Program</a>

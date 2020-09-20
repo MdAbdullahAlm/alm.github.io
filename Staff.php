@@ -16,6 +16,8 @@ $PermanentAddress=$_POST['PermanentAddress'];
 $MobileNumber=$_POST['MobileNumber'];
 $PresentAddress=$_POST['PresentAddress'];
 $email=$_POST['email'];
+
+$Category=$_POST['Category'];
 $fileToUpload=$_POST['fileToUpload'];
 $userIp= "";
 
@@ -23,11 +25,11 @@ $link= mysqli_connect("localhost", "root", "");
 
 mysqli_select_db($link,"alm");
 
-$CQSql=" Select studentName,fatherName,motherName,class,MobileNumber from staffinfo where studentName= '$userName' and fatherName ='$Father' and motherName='$Mother'  and MobileNumber='$MobileNumber'";
+$CQSql="Select studentName,fatherName,motherName,MobileNumber from staffinfo where studentName= '$userName' and fatherName ='$Father' and motherName='$Mother'  and MobileNumber='$MobileNumber'";
 $re1= mysqli_query($link,$CQSql);
 $count=mysqli_num_rows($re1);
 if($count == 0) {
-	$sql="INSERT INTO staffinfo (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`,  `email`, `file`,  `userId`, `entryTime`) VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$email','$fileToUpload','$userIp',CURRENT_TIMESTAMP)";
+	$sql="INSERT INTO staffinfo (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`,  `email`, `file`,  `userId`, `entryTime`, `Category`) VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$email','$fileToUpload','$userIp',CURRENT_TIMESTAMP,'$Category')";
 $re= mysqli_query($link,$sql);
 
 echo '<script>alert("Sucssesfully Done")</script>'; 
@@ -156,6 +158,10 @@ echo '<script>alert("$name already exists")</script>';
 											
 												<div class="form-group">
 													<input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+												</div>
+												
+												<div class="form-group">
+													<input type="text" class="form-input" name="Category" id="Category" placeholder="Your Category"/>
 												</div>
 												
 												<div class="form-group">

@@ -80,7 +80,7 @@ $display=mysqli_query($link,$result);
 while($row=mysqli_fetch_array($display))
 {
 	echo"<tr>";
-	  echo"<td colspan='3'> Class: ".$row['class']."</td>";
+	  echo"<td colspan='3' Style='font-weight: bold;'> Class: ".$row['class']."</td>";
 	echo"</tr>";
 	
 	$re="SELECT * FROM `studentinfo` Where class like '".$row['class']. "' ";

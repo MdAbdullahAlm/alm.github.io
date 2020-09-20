@@ -28,7 +28,8 @@ $CQSql=" Select studentName,fatherName,motherName,class,MobileNumber from teache
 $re1= mysqli_query($link,$CQSql);
 $count=mysqli_num_rows($re1);
 if($count == 0) {
-	  $sql="INSERT INTO teacherinfo (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `email`, `file`,  `userId`, `entryTime`) VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$email','$class','$fileToUpload','$userIp',CURRENT_TIMESTAMP)";
+	  $sql="INSERT INTO teacherinfo (`studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `email`, `file`,  `userId`, `entryTime`) 
+	  VALUES ('$userName','$Father','$Mother','$PresentAddress','$PermanentAddress','$MobileNumber','$class','$email','$fileToUpload','$userIp',CURRENT_TIMESTAMP)";
 $re= mysqli_query($link,$sql);
 
 echo '<script>alert("Sucssesfully Done")</script>'; 

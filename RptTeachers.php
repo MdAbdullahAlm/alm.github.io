@@ -52,7 +52,7 @@ include("RptHeaderAll.php");
 		<h5 Style=" margin-bottom: 0px;">Middel Kodurkhil, Boalkhali.</h5>
 		<h5 Style=" margin-bottom: 0px;">Phone: 01625896324. Email: alm108187@gmail.com</h5>
 		
-		<h4 Style=" font-weight: bold; margin-bottom: 0px;"> Student Information</h4>
+		<h4 Style=" font-weight: bold; margin-bottom: 0px;"> Teacher Information</h4>
 	</div>
 </div>
 
@@ -60,12 +60,12 @@ include("RptHeaderAll.php");
 
 <table style="padding: 15px; margin-bottom: 50px;">
 <tr>
-<th Style="width:20px"> Roll</th>
-<th Style='width:170px'> Name</th>
-<th Style='width:150px'> Father Name</th>
-<th Style='width:150px'> Mother Name</th>
-<th Style='width:120px'> Present Address </th>
-<th Style='width:120px'> Permanent Address</th>
+
+<th Style='width:70px'> Teacher Name</th>
+<th Style='width:70px'> Father Name</th>
+<th Style='width:70px'> Mother Name</th>
+<th Style='width:70px'> Present Address </th>
+<th Style='width:70px'> Permanent Address</th>
 <th Style='width:40px'> Mobile Number </th>
 <th Style='width:70px'> Email </th>
 
@@ -78,7 +78,7 @@ $link= mysqli_connect("localhost", "root", "");
 
 mysqli_select_db($link,"alm");
 
-$result="SELECT DISTINCT `class` FROM `studentinfo`  ";
+$result="SELECT DISTINCT `class` FROM `teacherinfo`  ";
 
 $display=mysqli_query($link,$result);
 
@@ -89,10 +89,10 @@ $display=mysqli_query($link,$result);
 while($row=mysqli_fetch_array($display))
 {
 	echo"<tr>";
-	  echo"<td colspan='8' Style='font-weight: bold;'> Class: ".$row['class']."</td>";
+	  echo"<td colspan='8' Style='font-weight: bold;'> Subject: ".$row['class']."</td>";
 	echo"</tr>";
 	
-	$re="SELECT * FROM `studentinfo` Where class like '".$row['class']. "' ";
+	$re="SELECT * FROM `teacherinfo` Where class like '".$row['class']. "' ";
 	
 		$dl=mysqli_query($link,$re);
 			
@@ -101,7 +101,6 @@ while($row=mysqli_fetch_array($display))
 				
 				
 				echo"<tr>";
-				echo"<td>".$row1['Cl_Roll']."</td>";
 				echo"<td>".$row1['studentName']."</td>";
 				echo"<td>".$row1['fatherName']."</td>";
 				echo"<td>".$row1['motherName']."</td>";
