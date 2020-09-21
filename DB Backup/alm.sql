@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2020 at 07:46 AM
+-- Generation Time: Sep 21, 2020 at 01:26 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.3.20
 
@@ -53,7 +53,8 @@ INSERT INTO `class1to5` (`autoId`, `studentName`, `fatherName`, `motherName`, `p
 (2, 'korim', 'rohim', 'rohima', 'ctg', 'ctg', '0163434', 'korim@gmail.com', 'Class 3', 'cda school', '', 'on', '', '2020-09-10 17:50:18'),
 (3, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 6', 'korim@gmail.com', 'Class 3', 'cda school a', 'bg1.jpg', '', '', '2020-09-10 17:51:48'),
 (4, 'roji akter', 'rana', 'rani', 'ctg', 'ctg', '0163434 64432', 'korim@gmail.com', 'Class 3', 'cda school a', 'bg4.jpg', 'on', '', '2020-09-12 17:49:44'),
-(5, 'sd', 'sd', 'as', 'ad', 'ads', '2324s', 'adf@gmail.com', 'Class 2', 'dsg', '', 'on', '', '2020-09-13 10:17:41');
+(5, 'sd', 'sd', 'as', 'ad', 'ads', '2324s', 'adf@gmail.com', 'Class 2', 'dsg', '', 'on', '', '2020-09-13 10:17:41'),
+(6, 'korim dfdf', 'sdaghf', 'dfs', 'hjfhgfzd', 'dsfhb', '01634344543432', 'dfdsfadf@fdfere', 'Class 3', 'cda school lol', '', 'on', '', '2020-09-17 17:22:44');
 
 -- --------------------------------------------------------
 
@@ -178,7 +179,11 @@ CREATE TABLE `result` (
 --
 
 INSERT INTO `result` (`autoId`, `Student_Name`, `Class`, `Roll`, `B1rst`, `B2rst`, `E1rst`, `E2rst`, `Mrst`, `Rrst`, `ssrst`, `srst`, `Irst`, `Biology`, `Physics`, `chemistry`, `HigerMath`, `Art`, `exs1`, `exs1rst`, `exs2`, `exs2rst`, `exs3`, `exs3rst`, `exs4`, `exs4rst`, `userIp`, `entryTime`) VALUES
-(1, 'korim', 'Class 9', 4, 45, 56, 54, 54, 56, 32, 45, 58, 78, 54, 56, 34, 34, 56, 'df', 65, 'sx', 66, 'zs', 67, 'e', 43, '', '2020-09-16 11:44:41');
+(1, 'korim', 'Class 9', 4, 45, 56, 54, 54, 56, 32, 45, 58, 78, 54, 56, 34, 34, 56, 'df', 65, 'sx', 66, 'zs', 67, 'e', 43, '', '2020-09-16 11:44:41'),
+(2, 'korim', 'Class 2', 1, 45, 56, 54, 54, 56, 32, 45, 58, 78, 54, 56, 34, 34, 56, 'df', 65, 'sx', 66, 'zs', 67, 'e', 43, '', '2020-09-21 12:04:59'),
+(3, 'roji', 'Class 2', 7, 45, 56, 54, 54, 56, 32, 45, 58, 78, 54, 56, 34, 34, 56, 'df', 65, 'sx', 66, 'zs', 67, 'e', 43, '', '2020-09-21 13:08:21'),
+(4, 'md Alm', 'Class 9', 8, 45, 56, 54, 54, 56, 32, 45, 58, 78, 54, 56, 34, 34, 56, 'df', 65, 'sx', 66, 'zs', 67, 'e', 43, '', '2020-09-21 13:08:56'),
+(5, 'roji akter', 'Class 2', 9, 45, 56, 54, 54, 56, 32, 45, 58, 78, 54, 56, 34, 34, 56, 'df', 65, 'sx', 66, 'zs', 67, 'e', 43, '', '2020-09-21 13:09:31');
 
 -- --------------------------------------------------------
 
@@ -197,16 +202,25 @@ CREATE TABLE `staffinfo` (
   `email` varchar(221) NOT NULL,
   `file` varchar(211) NOT NULL,
   `userId` varchar(211) NOT NULL,
-  `entryTime` datetime NOT NULL
+  `entryTime` datetime NOT NULL,
+  `Category` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `staffinfo`
 --
 
-INSERT INTO `staffinfo` (`autoId`, `studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `email`, `file`, `userId`, `entryTime`) VALUES
-(1, 'korim', 'rana', 'rohima', 'ctg', 'ctg', '0163434', 'korim@gmail.com', '', '', '2020-09-15 12:36:27'),
-(2, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 6', 'df@fd', '', '', '2020-09-15 12:40:13');
+INSERT INTO `staffinfo` (`autoId`, `studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `email`, `file`, `userId`, `entryTime`, `Category`) VALUES
+(1, 'korim', 'rana', 'rohima', 'ctg', 'ctg', '0163434', 'korim@gmail.com', '', '', '2020-09-15 12:36:27', ''),
+(2, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 6', 'df@fd', '', '', '2020-09-15 12:40:13', ''),
+(3, 'fdf', 'sdf', 'sd', 'sdf', 'sdf', '8765', 'ds@hg', '', '', '2020-09-20 11:57:36', 'ffsd'),
+(4, '$userName', '$Father', '$Mother', '$PresentAddress', '$PermanentAddress', '$MobileNumber', '$email', '$fileToUpload', '$userIp', '2020-09-20 11:59:00', '$Category'),
+(5, 'fs', 'sdf', 'fsad', 'sdgvf', 'sdgfdhgd', '3545', 'fsgajdrgz@dfhfjs', '', '', '2020-09-20 12:00:17', 'fadsfhgj'),
+(6, 't', 'fyh', 'fgj', 'sdf', 'ryhtj', '65634232', 'fd@fghgj', '', '', '2020-09-20 13:17:42', 'fdhjn'),
+(7, 'dh', 'dfhnh', 'dfhbv', 'adfaghfj', 'fdhngjv', '45435', 'fggfh@gjhdkjtgj', '', '', '2020-09-20 13:18:14', 'dfgbjhfg'),
+(8, 'sdgfdhfhbfdhnffffff', 'fdhfhbfdhnfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 'fdhfhbfdhnffffffffffffffffffffwsfsgffffffffffffffffffffffffffffffffffffffffffffffffffff', 'fdhfhbfdhnffffffhfhbfdhnfffffffff', 'fdhfhbfdhnffffffhfhbfdhnfffffffff', '35657898675643', 'vnmgdfxhdh@fhjgljhk', '', '', '2020-09-20 13:19:41', 'xgtfjhkhjkjhhhhhhhhhhhhh'),
+(9, 'sdgfdhfhbfdhnffffff', 'fdhfhbfdhnfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 'fdhfhbfdhnffffffffffffffffffffwsfsgffffffffffffffffffffffffffffffffffffffffffffffffffff', 'fdhfhbfdhnffffffhfhbfdhnfffffffff', 'fdhfhbfdhnffffffhfhbfdhnfffffffff', '35657898675643', 'vnmgdfxhdh@fhjgljhk', '', '', '2020-09-20 13:46:04', 'xgtfjhkhjkjhhhhhhhhhhhhh'),
+(10, 'sdgfdhfhbfdhnffffff', 'fdhfhbfdhnfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 'fdhfhbfdhnffffffffffffffffffffwsfsgffffffffffffffffffffffffffffffffffffffffffffffffffff', 'fdhfhbfdhnffffffhfhbfdhnfffffffff', 'fdhfhbfdhnffffffhfhbfdhnfffffffff', '35657898675643', 'vnmgdfxhdh@fhjgljhk', '', '', '2020-09-20 13:47:14', 'xgtfjhkhjkjhhhhhhhhhhhhh');
 
 -- --------------------------------------------------------
 
@@ -235,17 +249,41 @@ CREATE TABLE `studentinfo` (
 --
 
 INSERT INTO `studentinfo` (`autoId`, `studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `Cl_Roll`, `email`, `file`, `userId`, `entryTime`) VALUES
-(1, 'roji', 'rohim', 'rani', 'ctg', 'ctg', '0163434 6', 'korim@gmail.com', 0, 'Class 3', 'cl1.jpg', '', '2020-09-15 11:56:14'),
-(2, 'roji', 'rohim', 'rani', 'ctg', 'ctg', '0163434 6', 'korim@gmail.com', 0, 'Class 3', 'cl1.jpg', '', '2020-09-15 11:57:45'),
-(3, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'alm@gmail.com', 0, 'Class 3', 'bg7.jpg', '', '2020-09-15 11:59:04'),
-(4, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'alm@gmail.com', 0, 'Class 3', 'bg7.jpg', '', '2020-09-15 12:07:54'),
-(5, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'alm@gmail.com', 0, 'Class 3', 'bg7.jpg', '', '2020-09-15 12:09:10'),
-(6, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'korim@gmail.com', 0, 'Class 3', 'cl1.jpg', '', '2020-09-15 12:10:31'),
-(7, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'korim@gmail.com', 0, 'Class 3', 'cl1.jpg', '', '2020-09-15 12:24:41'),
-(8, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'korim@gmail.com', 0, 'Class 3', 'cl1.jpg', '', '2020-09-15 12:27:20'),
-(9, 'korim', 'rana', 'rohima', 'ctg', 'sd', '0163434 64432', 'df@fd', 0, '1', '', '', '2020-09-15 13:32:33'),
+(1, 'roji', 'rohim', 'rani', 'ctg', 'ctg', '0163434 6', 'Class 3', 0, 'korim@gmail.com ', 'cl1.jpg', '', '2020-09-15 11:56:14'),
+(2, 'roji', 'rohim', 'rani', 'ctg', 'ctg', '0163434 6', 'Class 3', 0, 'korim@gmail.com', 'cl1.jpg', '', '2020-09-15 11:57:45'),
+(3, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'Class 3', 0, 'alm@gmail.com', 'bg7.jpg', '', '2020-09-15 11:59:04'),
+(4, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'Class 4', 0, 'gff@gfh', 'bg7.jpg', '', '2020-09-15 12:07:54'),
+(5, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'Class 3', 0, 'alm@gmail.com', 'bg7.jpg', '', '2020-09-15 12:09:10'),
+(6, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'Class 4', 0, 'sfdg@dg', 'cl1.jpg', '', '2020-09-15 12:10:31'),
+(7, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'Class 4', 0, ' korim@gmail.com', 'cl1.jpg', '', '2020-09-15 12:24:41'),
+(8, 'korim a', 'rohims', 'rohimad', 'ctg', 'ctg', '0163434 64432', 'Class 2', 0, 'korim@gmail.com', 'cl1.jpg', '', '2020-09-15 12:27:20'),
+(9, 'korim', 'rana', 'rohima', 'ctg', 'sd', '0163434 64432', 'class 2', 0, '', '', '', '2020-09-15 13:32:33'),
 (10, 'korim', 'rana', 'rohima', 'ctg', 'sd', '0163434 64432', 'Class 2', 1, 'df@fd', '', '', '2020-09-15 13:34:11'),
-(11, 'roji akter', 'rohims', 'rani', 'ctg', 'sd', '1335462', 'Class 3', 4, 'df@fd', '', '', '2020-09-15 13:34:51');
+(11, 'roji akter', 'rohims', 'rani', 'ctg', 'sd', '1335462', 'Class 3', 4, 'df@fd', '', '', '2020-09-15 13:34:51'),
+(12, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 2, 'dlfs', 'd', '3534', '2020-09-19 12:50:18'),
+(13, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 3, 'dlfs', 'd', '3534', '2020-09-19 12:50:35'),
+(14, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 4, 'dlfs', 'd', '3534', '2020-09-19 12:50:51'),
+(15, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 5, 'dlfs', 'd', '3534', '2020-09-19 12:51:08'),
+(16, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 6, 'dlfs', 'd', '3534', '2020-09-19 12:51:22'),
+(17, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 7, 'dlfs', 'd', '3534', '2020-09-19 12:51:52'),
+(18, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 8, 'dlfs', 'd', '3534', '2020-09-19 12:52:06'),
+(19, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 9, 'dlfs', 'd', '3534', '2020-09-19 12:52:21'),
+(20, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 5', 10, 'dlfs', 'd', '3534', '2020-09-19 12:52:39'),
+(21, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 6', 1, 'dlfs', 'd', '3534', '2020-09-19 12:52:59'),
+(22, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 6', 2, 'dlfs', 'd', '3534', '2020-09-19 12:53:14'),
+(23, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 6', 3, 'dlfs', 'd', '3534', '2020-09-19 12:53:27'),
+(24, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 6', 4, 'dlfs', 'd', '3534', '2020-09-19 12:54:15'),
+(25, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 6', 5, 'dlfs', 'd', '3534', '2020-09-19 12:54:28'),
+(26, 'ake', 'df', 'fdg', 'fd', 'dgd', '453', 'Class 6', 6, 'dlfs', 'd', '3534', '2020-09-19 12:54:46'),
+(27, 'korim', 'rana', 'rohimad', 'df', 'sd', '0163434 64432', 'Class 6', 7, 'df@fd', '', '', '2020-09-19 12:56:19'),
+(28, 'alm birthday', 'rohims', 'rohimad', 'ctg', 'sd', '01634344543432', 'Class 6', 8, 'alm@gmail.com', '', '', '2020-09-19 12:56:39'),
+(29, 'roji', 'rohims', 'rohimad', 'df', 'sd', '01634344543432', 'Class 6', 9, 'df@fd', '', '', '2020-09-19 12:56:58'),
+(30, 'alm birthday', 'rana', 'rohima', 'df', 'sd', '01634344543432', 'Class 6', 10, 'alm@gmail.com', '', '', '2020-09-19 12:57:15'),
+(31, 'alm birthday', 'rohim', 'rohimad', 'ctg', 'sd', '1335462', 'Class 7', 1, 'korim@gmail.com', '', '', '2020-09-19 12:57:37'),
+(32, 'korim', 'rana', 'rohima', 'ctg', 'ctg', '1335462', 'Class 7', 2, 'df@fd', '', '', '2020-09-19 12:57:54'),
+(33, 'as', 'df', 'dfgb', 'sdf', 'sfv', '75634', 'Class 7', 3, 'df@fd', '', '', '2020-09-19 12:58:17'),
+(34, 'f', 'd', 'ad', 'dg', 'as', '832', 'Class 7', 4, 'df@fd', '', '', '2020-09-19 12:58:42'),
+(35, 'korim a', 'rohim', 'rohimad', 'df', 'sd', '0163434 6', 'Class 7', 5, '5dgfg@dge', '', '', '2020-09-19 12:59:06');
 
 -- --------------------------------------------------------
 
@@ -342,7 +380,12 @@ CREATE TABLE `teacherinfo` (
 --
 
 INSERT INTO `teacherinfo` (`autoId`, `studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `email`, `file`, `userId`, `entryTime`) VALUES
-(1, 'korim', 'rohim', 'rohima', 'ctg', 'ctg', '0163434', 'alm@gmail.com', 'English 1st', 'bg6.jpg', '', '2020-09-15 12:39:24');
+(1, 'korim', 'rohim', 'rohima', 'ctg', 'ctg', '0163434', 'alm@gmail.com', 'English 1st', 'bg6.jpg', '', '2020-09-15 12:39:24'),
+(2, 'alm birthday', 'rana', 'rohima', 'df', 'ctg', '01634344543432', 'English 2nd', 'alm@gmail.com', '', '', '2020-09-20 10:54:14'),
+(3, 'roji', 'rohims', 'rohima', 'hjfhgfzd', 'ctg', '75634', 'Relagion', 'dfdsfadf@fdfere', '', '', '2020-09-20 10:54:33'),
+(4, 'alm birthday', 'rohims', 'rani', 'ctg', 'ctg', '0163434 64432', 'Vice Principal', 'df@fd', '', '', '2020-09-20 10:54:50'),
+(5, 'korim a', 'rohim', 'rani', 'df', 'ctg', '0163434 6', 'S.S', 'alm@gmail.com', '', '', '2020-09-20 10:55:06'),
+(6, 'roji akter', 'rohim', 'rohimad', 'ctg', 'ctg', '75634', 'Math', '5dgfg@dge', '', '', '2020-09-20 10:57:12');
 
 --
 -- Indexes for dumped tables
@@ -422,7 +465,7 @@ ALTER TABLE `teacherinfo`
 -- AUTO_INCREMENT for table `class1to5`
 --
 ALTER TABLE `class1to5`
-  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `class6to10`
@@ -446,19 +489,19 @@ ALTER TABLE `programinfo`
 -- AUTO_INCREMENT for table `result`
 --
 ALTER TABLE `result`
-  MODIFY `autoId` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `autoId` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `staffinfo`
 --
 ALTER TABLE `staffinfo`
-  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `studentinfo`
 --
 ALTER TABLE `studentinfo`
-  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `tbcontact`
@@ -482,7 +525,7 @@ ALTER TABLE `tbreginfo`
 -- AUTO_INCREMENT for table `teacherinfo`
 --
 ALTER TABLE `teacherinfo`
-  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
