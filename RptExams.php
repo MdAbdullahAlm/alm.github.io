@@ -29,6 +29,7 @@ tr:nth-child(even) {
 
 
 
+
 </style>
 
 
@@ -52,23 +53,20 @@ include("RptHeaderAll.php");
 		<h5 Style=" margin-bottom: 0px;">Middel Kodurkhil, Boalkhali.</h5>
 		<h5 Style=" margin-bottom: 0px;">Phone: 01625896324. Email: alm108187@gmail.com</h5>
 		
-		<h4 Style=" font-weight: bold; margin-bottom: 0px;"> Student Information</h4>
+		<h4 Style=" font-weight: bold; margin-bottom: 0px;"> Exam Schdeule</h4>
 	</div>
 </div>
 
 
 
-<table style="padding: 15px; margin-bottom: 50px;">
+<table style="padding: 15px; margin-bottom: 50px; table-layout: fixed; width: 100%;">
 <tr>
-<th Style="width:20px"> Roll</th>
-<th Style='width:170px'> Name</th>
-<th Style='width:150px'> Father Name</th>
-<th Style='width:150px'> Mother Name</th>
-<th Style='width:120px'> Present Address </th>
-<th Style='width:120px'> Permanent Address</th>
-<th Style='width:40px'> Mobile Number </th>
-<th Style='width:70px'> Email </th>
-
+<th Style='width:70px'> Program Name</th>
+<th Style='width:70px'> Start Date </th>
+<th Style='width:70px'> End Date </th>
+<th Style='width:70px'> Buget </th>
+<th Style='width:40px'> Liability </th>
+<th Style='width:70px'> Mobile Number </th>
 
 </tr>
 <?php
@@ -78,21 +76,9 @@ $link= mysqli_connect("localhost", "root", "");
 
 mysqli_select_db($link,"alm");
 
-$result="SELECT DISTINCT `class` FROM `studentinfo`  ";
 
-$display=mysqli_query($link,$result);
-
- 
 	
-	
-
-while($row=mysqli_fetch_array($display))
-{
-	echo"<tr>";
-	  echo"<td colspan='8' Style='font-weight: bold;'> Class: ".$row['class']."</td>";
-	echo"</tr>";
-	
-	$re="SELECT * FROM `studentinfo` Where class like '".$row['class']. "' ";
+	$re="SELECT * FROM `examschdeule` ";
 	
 		$dl=mysqli_query($link,$re);
 			
@@ -101,18 +87,15 @@ while($row=mysqli_fetch_array($display))
 				
 				
 				echo"<tr>";
-				echo"<td>".$row1['Cl_Roll']."</td>";
-				echo"<td>".$row1['studentName']."</td>";
-				echo"<td>".$row1['fatherName']."</td>";
-				echo"<td>".$row1['motherName']."</td>";
-				echo"<td>".$row1['presentAddress']."</td>";
-				echo"<td>".$row1['permanentAddress']."</td>";
-				echo"<td>".$row1['MobileNumber']."</td>";
-				echo"<td>".$row1['email']."</td>";
-
+				echo"<td>".$row1['ExamName']."</td>";
+				echo"<td>".$row1['StartDate']."</td>";
+				echo"<td>".$row1['EndDate']."</td>";
+				echo"<td>".$row1['Buget']."</td>";
+				echo"<td>".$row1['Liability by']."</td>";
+				echo"<td>".$row1['mobile']."</td>";
 				echo"</tr>";
 			}
-}
+
 ?>
 </table>
 

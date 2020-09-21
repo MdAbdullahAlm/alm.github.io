@@ -60,13 +60,13 @@
                                             <a class="nav-link" href="RptStaff.php">Staff</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-morris.php">Program</a>
+                                            <a class="nav-link" href="RptProgram.php">Program</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-sparkline.php">Results</a>
+                                            <a class="nav-link" href="RptResult.php">Results</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/chart-gauge.php">Exams Details</a>
+                                            <a class="nav-link" href="RptExams.php">Exams Details</a>
                                         </li>
                                     </ul>
                                 </div>

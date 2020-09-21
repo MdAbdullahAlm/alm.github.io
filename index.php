@@ -101,14 +101,18 @@
 											<?php
 											$link= mysqli_connect("localhost", "root", "");
 											mysqli_select_db($link,"alm");
-											$st="SELECT DISTINCT `class` FROM `studentinfo`  ";
-											echo"<h1 class='mb-1'> Class: ".$st['class']."</h1>";
-										   <h1 class="mb-1">$12099</h1>
+											$st="SELECT * FROM `studentinfo`  ";
+											$re= mysqli_query($link,$st);
+											$count=mysqli_num_rows($re);
+
+											
+											echo"<h1 class='mb-1'> ".$count."</h1>";
+										   
 										   
 										   ?>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
+                                          <!--   <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span> -->
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue"></div>
@@ -117,12 +121,21 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Affiliate Revenue</h5>
+                                        <h5 class="text-muted">Total Teachers</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
+                                            <?php
+											$link= mysqli_connect("localhost", "root", "");
+											mysqli_select_db($link,"alm");
+											$st="SELECT * FROM `teacherinfo`  ";
+											$re= mysqli_query($link,$st);
+											$count=mysqli_num_rows($re);
+
+											echo"<h1 class='mb-1'> ".$count."</h1>";
+										   ?>
+										   
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
+                                           <!-- <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>  -->
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue2"></div>
@@ -131,12 +144,21 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Refunds</h5>
+                                        <h5 class="text-muted">Total Staff</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">0.00</h1>
+                                           <?php
+											$link= mysqli_connect("localhost", "root", "");
+											mysqli_select_db($link,"alm");
+											$st="SELECT * FROM `staffinfo`  ";
+											$re= mysqli_query($link,$st);
+											$count=mysqli_num_rows($re);
+
+											echo"<h1 class='mb-1'> ".$count."</h1>";
+										   ?>
+										   
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-primary font-weight-bold">
-                                            <span>N/A</span>
+                                          <!--   <span>N/A</span>  -->
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue3"></div>
@@ -145,12 +167,31 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Avg. Revenue Per User</h5>
+                                        <h5 class="text-muted">Total Pepole</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$28000</h1>
+                                             <?php
+											$link= mysqli_connect("localhost", "root", "");
+											mysqli_select_db($link,"alm");
+											$st1="SELECT * FROM `studentinfo`  ";
+											$re1= mysqli_query($link,$st1);
+											$count1=mysqli_num_rows($re1);
+											
+											$st2="SELECT * FROM `teacherinfo`  ";
+											$re2= mysqli_query($link,$st2);
+											$count2=mysqli_num_rows($re2);
+											
+											$st3="SELECT * FROM `staffinfo`  ";
+											$re3= mysqli_query($link,$st3);
+											$count3=mysqli_num_rows($re3);
+											
+											$count= $count1 +  $count2 + $count3;
+
+											echo"<h1 class='mb-1'> ".$count."</h1>";
+										   ?>
+										   
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
-                                            <span>-2.00%</span>
+                                          <!--   <span>-2.00%</span> -->
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue4"></div>

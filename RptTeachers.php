@@ -116,17 +116,13 @@ while($row=mysqli_fetch_array($display))
 </table>
 
 <div class="footer"  Style="height:10px;">
-                   <h6 Style=" float: left; width: 350px;">Print Time: 2020-08-20 17:53:39.   User Id: 0120100101012</h6>
+                   <h6 Style=" float: left; width: 350px;"> <?php
+											echo "Print Time: " . date("Y/m/d");
+											   echo " User Ip: ".$_SERVER['HTTP_HOST'];
+											  ?></h6>
 				<h6 Style=" float: left; width: 450px;">Solution by: ALM School. Phone:01625896324. Email: alm108187@gmail.com</h6> 
-				<h6 Style=" float: right; width: 70px;">Page: </h6>
 				
-				
-				   
-                        
-						
-						
-              
-                    
+                 
                 
 </div>
 </div>
