@@ -76,13 +76,13 @@
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-elements.php">Create Group</a>
+                                            <a class="nav-link" href="CreateGroup.php">Create Group</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-validation.php">Create Ledger</a>
+                                            <a class="nav-link" href="CreateLedger.php">Create Ledger</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/multiselect.php">Cash Payment Voucher</a>
+                                            <a class="nav-link" href="CashPaymentVoucher.php">Cash Payment Voucher</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="pages/datepicker.php">Bank Payment Voucher</a>
@@ -98,9 +98,6 @@
                                         </li>
 										<li class="nav-item">
                                             <a class="nav-link" href="pages/bootstrap-select.php">Money Receipt</a>
-                                        </li>
-										<li class="nav-item">
-                                            <a class="nav-link" href="pages/bootstrap-select.php">Advance Salary Application</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -9,24 +9,20 @@
 		
 		if (isset($_POST['submit'])) {
 
-$userName=$_POST['name'];
-$Sdate=$_POST['Sdate'];
-$Edate=$_POST['Edate'];
-$buget=$_POST['buget'];
-$MobileNumber=$_POST['MobileNumber'];
-$Liabilityby=$_POST['Liabilityby'];
+$Group=$_POST['Group'];
+$CGroup=$_POST['CGroup'];
 $userIp= $_SERVER['HTTP_HOST'];
 
 $link= mysqli_connect("localhost", "root", "");
 
 mysqli_select_db($link,"alm");
 
-$CQSql=" Select ExamName,StartDate,EndDate from ExamSchdeule where ExamName= '$userName' and StartDate ='$Sdate' and EndDate='$Edate' ";
+$CQSql=" Select CGroup  from creategroup where CGroup ='$CGroup' ";
 $re1= mysqli_query($link,$CQSql);
 $count=mysqli_num_rows($re1);
 if($count == 0) {
-	$sql="INSERT INTO ExamSchdeule( `ExamName`, `StartDate`, `EndDate`, `Buget`, `Liability by`, `mobile`, `userIp`, `entryTime`)
-	VALUES ('$userName','$Sdate','$Edate','$buget','$Liabilityby','$MobileNumber','',CURRENT_TIMESTAMP)";
+	$sql="INSERT INTO creategroup( MainGroup, CGroup , userIp, entryTime)
+	VALUES ('$Group','$CGroup','$userIp',CURRENT_TIMESTAMP)";
 $re= mysqli_query($link,$sql);
 
 echo '<script>alert("Sucssesfully Done")</script>'; 
@@ -120,7 +116,63 @@ echo '<script>alert("$name already exists")</script>';
         <!-- wrapper  -->
         <!-- ============================================================== -->
         <div class="dashboard-wrapper">
-            <div class="dashboard-ecommerce">
+           <!--<div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                  
+							<div class="main">
+
+								<section class="signup">
+									<div class="container">
+										<div class="signup-content">
+											<form method="POST" id="signup-form" class="signup-form">
+												<h2 class="form-title"> Find Group </h2>
+												<div class="form-group">
+													  <p>Your Group: </p>
+													  <div class="row">
+												    	<div class="col-sm-3">
+														  <select class="form-control" name="Group">
+															<?php
+																 $link= mysqli_connect("localhost", "root", "");
+
+																mysqli_select_db($link,"alm");
+
+
+																	
+																	$re="SELECT * FROM `creategroup` ";
+																	
+																		$dl=mysqli_query($link,$re);
+																			
+																			while($row1=mysqli_fetch_array($dl))
+																			{
+														
+														?>
+														<option><?php echo $row1['CGroup']; ?></option>
+																	<?php   }  ?> 
+																			
+																				
+														  </select>
+														</div>
+													  </div>
+												</div>
+												
+												
+											</form>
+											
+										</div>
+									</div>
+								</section>
+
+							</div>
+                    
+                    
+            </div>
+			</div> -->
+
+
+
+
+
+		   <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
                     <!-- ============================================================== -->
                     <!-- pageheader  -->
@@ -132,27 +184,25 @@ echo '<script>alert("$name already exists")</script>';
 									<div class="container">
 										<div class="signup-content">
 											<form method="POST" id="signup-form" class="signup-form">
-												<h2 class="form-title"> Entry Exam </h2>
+												<h2 class="form-title"> Create Group </h2>
+												
 												<div class="form-group">
-													<input type="text" class="form-input" name="name" id="name" placeholder="Exam Name"/>
+													  
+													  <div class="row">
+														<div class="col-sm-3">
+														  <select class="form-control" name="Group">
+															<option value="All">All</option>
+															<option value="Assets">Assets</option>
+															<option value="Liabilities">Liabilities</option>
+															<option value="Income">Income</option>
+															<option value="Expenses">Expenses</option>
+														  </select>
+														</div>
+													  </div>
 												</div>
 												<div class="form-group">
-													<input type="date" class="form-input" name="Sdate" id="Sdate" placeholder="Start Date"/>
+													<input type="text" class="form-input" name="CGroup" id="CGroup" placeholder="Create New Group"/>
 												</div>
-												<div class="form-group">
-													<input type="date" class="form-input" name="Edate" id="Edate" placeholder="End Date"/>
-												</div>
-												<div class="form-group">
-													<input type="text" class="form-input" name="buget" id="buget" placeholder="Buget"/>
-												</div>
-												<div class="form-group">
-													<input type="text" class="form-input" name="Liabilityby" id="Liabilityby" placeholder="Liability by"/>
-												</div>
-												<div class="form-group">
-													<input type="text" class="form-input" name="MobileNumber" id="MobileNumber" placeholder="Mobile Number"/>
-												</div>   
-										
-											
 												
 												<div class="form-group">
 													<input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
@@ -169,6 +219,7 @@ echo '<script>alert("$name already exists")</script>';
                     <!-- ============================================================== -->
                     
             </div>
+			</div>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
