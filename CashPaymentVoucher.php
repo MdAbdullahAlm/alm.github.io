@@ -152,7 +152,7 @@ echo '<script>alert("$name already exists")</script>';
 												<table>
 													<tr>
 														<td>
-															<p Style="font-weight: bold;"> Paid To: </p>
+															<p Style="font-weight: bold; width:100px;"> Paid To: </p>
 														</td>
 														<td Style="width:350px;">
 															<div class="form-group" >
@@ -180,14 +180,14 @@ echo '<script>alert("$name already exists")</script>';
 													<table>
 													<tr>
 														<td>
-															<p Style="font-weight: bold;"> Cash A/C: </p>
+															<p Style="font-weight: bold; width:100px;"> Cash A/C: </p>
 														</td>
 														<td>
 															<div class="form-group" >
 													
 																  <div class="row">
 																	<div class="col-sm-3">
-																	  <select class="form-control" name="CGroup" Style="width:400px;">
+																	  <select class="form-control" name="CGroup" Style="width:350px;">
 																		<option> </option>
 																		<?php
 																			 $link= mysqli_connect("localhost", "root", "");
@@ -197,15 +197,12 @@ echo '<script>alert("$name already exists")</script>';
 
 																				
 																				$re="SELECT * FROM `creategroup` ";
-																				
-																					$dl=mysqli_query($link,$re);
-																						
-																						while($row1=mysqli_fetch_array($dl))
-																						{
-																	
-																	?>
-																	<option value="<?php echo $row1['CGroup']; ?>"><?php echo $row1['CGroup']; ?></option>
-																				<?php   }  ?> 
+																				$dl=mysqli_query($link,$re);
+																				while($row1=mysqli_fetch_array($dl))
+																				{
+																				?>
+																				<option value="<?php echo $row1['CGroup']; ?>"><?php echo $row1['CGroup']; ?></option>
+																							<?php   }  ?> 
 																						
 																							
 																	  </select>
@@ -230,15 +227,15 @@ echo '<script>alert("$name already exists")</script>';
 												<table>
 													<tr>
 														<td>
-															<p Style="font-weight: bold;"> Budget : </p>
+															<p Style="font-weight: bold; width:100px;"> Budget : </p>
 														</td>
 														<td Style="width:350px;">
 															<div class="form-group" >
 																<input type="text" class="form-input" name="name" id="name" placeholder="23" disabled />
 															</div>
 														</td>
-														<td>
-															<p Style="font-weight: bold;"> Balance : </p>
+														<td Style="padding-left: 20px;">
+															<p Style="font-weight: bold; "> Balance : </p>
 														</td>
 														<td Style="width:350px;">
 															<div class="form-group" >
@@ -250,115 +247,54 @@ echo '<script>alert("$name already exists")</script>';
 												
 												
 												
-												<?php
-//index.php
-$connect = new PDO("localhost", "root", "");
-function fill_unit_select_box($connect)
-{ 
- $output = '';
- $query = "SELECT * FROM tbl_unit ORDER BY unit_name ASC";
- $statement = $connect->prepare($query);
- $statement->execute();
- $result = $statement->fetchAll();
- foreach($result as $row)
- {
-  $output .= '<option value="'.$row["unit_name"].'">'.$row["unit_name"].'</option>';
- }
- return $output;
-}
-
-?>
-												
+											
 												<form method="post" id="insert_form">
 													<div class="table-repsonsive">
 													 <span id="error"></span>
 													 <table class="table table-bordered" id="item_table">
 													  <tr>
-													   <th>Enter Item Name</th>
-													   <th>Enter Quantity</th>
-													   <th>Select Unit</th>
-													   <th><button type="button" name="add" class="btn btn-success btn-sm add"><span class="glyphicon glyphicon-plus"></span></button></th>
+													   <th>Ledger Name</th>
+													   <th>Balance</th>
+													   <th>Debit Amount</th>
 													  </tr>
+													  
+													  <?php
+
+															$link= mysqli_connect("localhost", "root", "");
+
+															mysqli_select_db($link,"alm");
+														$re="SELECT * FROM `createledger` ";
+	
+															$dl=mysqli_query($link,$re);
+															
+															while($row1=mysqli_fetch_array($dl))
+															{
+															
+																echo"<tr>";
+																
+																$re2="SELECT * FROM `createledger` ";
+																$dl3=mysqli_query($link,$re2);
+																echo "<td><select class='form-control' name='CLedger' Style='width:350px;'>";
+																while($row2=mysqli_fetch_array($dl3))
+																{
+																	echo "<option value=". $row2['CLedger'].">". $row2['CLedger']."</option>";
+																}
+																echo "<select></td>";
+																
+																echo"<td>".$row1['MainGroup']."</td>";
+																echo"<td><input type='text' class='form-input' name='DrAmount' id='DrAmount' placeholder='Dr Amount'/></td>";
+																
+																echo"</tr>";
+																
+															}
+															?>
 													 </table>
 													 <div align="center">
 													  <input type="submit" name="submit" class="btn btn-info" value="Insert" />
 													 </div>
 													</div>
 												</form>
-												<script>
-$(document).ready(function(){
- 
- $(document).on('click', '.add', function(){
-  var html = '';
-  html += '<tr>';
-  html += '<td><input type="text" name="item_name[]" class="form-control item_name" /></td>';
-  html += '<td><input type="text" name="item_quantity[]" class="form-control item_quantity" /></td>';
-  html += '<td><select name="item_unit[]" class="form-control item_unit"><option value="">Select Unit</option><?php echo fill_unit_select_box($connect); ?></select></td>';
-  html += '<td><button type="button" name="remove" class="btn btn-danger btn-sm remove"><span class="glyphicon glyphicon-minus"></span></button></td></tr>';
-  $('#item_table').append(html);
- });
- 
- $(document).on('click', '.remove', function(){
-  $(this).closest('tr').remove();
- });
- 
- $('#insert_form').on('submit', function(event){
-  event.preventDefault();
-  var error = '';
-  $('.item_name').each(function(){
-   var count = 1;
-   if($(this).val() == '')
-   {
-    error += "<p>Enter Item Name at "+count+" Row</p>";
-    return false;
-   }
-   count = count + 1;
-  });
-  
-  $('.item_quantity').each(function(){
-   var count = 1;
-   if($(this).val() == '')
-   {
-    error += "<p>Enter Item Quantity at "+count+" Row</p>";
-    return false;
-   }
-   count = count + 1;
-  });
-  
-  $('.item_unit').each(function(){
-   var count = 1;
-   if($(this).val() == '')
-   {
-    error += "<p>Select Unit at "+count+" Row</p>";
-    return false;
-   }
-   count = count + 1;
-  });
-  var form_data = $(this).serialize();
-  if(error == '')
-  {
-   $.ajax({
-    url:"insert.php",
-    method:"POST",
-    data:form_data,
-    success:function(data)
-    {
-     if(data == 'ok')
-     {
-      $('#item_table').find("tr:gt(0)").remove();
-      $('#error').html('<div class="alert alert-success">Item Details Saved</div>');
-     }
-    }
-   });
-  }
-  else
-  {
-   $('#error').html('<div class="alert alert-danger">'+error+'</div>');
-  }
- });
- 
-});
-</script>															 
+																											 
 												
 												<div class="form-group">
 													<input type="text" class="form-input" name="Fathername" id="Fathername" placeholder="Father Name"/>
