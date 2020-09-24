@@ -275,6 +275,7 @@ echo '<script>alert("$name already exists")</script>';
 																$re2="SELECT * FROM `createledger` ";
 																$dl3=mysqli_query($link,$re2);
 																echo "<td><select class='form-control' name='CLedger' Style='width:350px;'>";
+																echo "<option > </option>";
 																while($row2=mysqli_fetch_array($dl3))
 																{
 																	echo "<option value=". $row2['CLedger'].">". $row2['CLedger']."</option>";
