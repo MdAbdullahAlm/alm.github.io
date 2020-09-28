@@ -12,6 +12,9 @@
 $Group=$_POST['Group'];
 $CGroup=$_POST['CGroup'];
 $CLedger=$_POST['CLedger'];
+$crAmount=$_POST['crAmount'];
+$drAmount=$_POST['drAmount'];
+$opYear=$_POST['opYear'];
 $userIp= $_SERVER['HTTP_HOST'];
 
 $link= mysqli_connect("localhost", "root", "");
@@ -22,8 +25,8 @@ $CQSql=" Select CGroup,CLedger  from createledger where CGroup ='$CGroup' and CL
 $re1= mysqli_query($link,$CQSql);
 $count=mysqli_num_rows($re1);
 if($count == 0) {
-	$sql="INSERT INTO createledger( MainGroup, CGroup, CLedger, userIp, entryTime)
-	VALUES ('$Group','$CGroup','$CLedger','$userIp',CURRENT_TIMESTAMP)";
+	$sql="INSERT INTO tbledgeropeningbalance( MainGroup, CGroup, ledgerId,crAmount, drAmount, opYear, userIp, entryTime)
+	VALUES ('$Group','$CGroup','$CLedger','$crAmount','$drAmount','$opYear','$userIp',CURRENT_TIMESTAMP)";
 $re= mysqli_query($link,$sql);
 
 echo '<script>alert("Sucssesfully Done")</script>'; 
@@ -163,7 +166,7 @@ echo '<script>alert("$name already exists")</script>';
 
 
 																	
-																	$re="SELECT * FROM `creategroup` ";
+																	$re="SELECT * FROM `tbledgeropeningbalance` ";
 																	
 																		$dl=mysqli_query($link,$re);
 																			
@@ -182,6 +185,36 @@ echo '<script>alert("$name already exists")</script>';
 												<div class="form-group">
 													<input type="text" class="form-input" name="CLedger" id="CLedger" placeholder="Create New Ledger"/>
 												</div>
+												
+												
+												<table>
+													<tr>
+														<td>
+															<p Style="font-weight: bold; "> Cr Amount: </p>
+														</td>
+														<td Style="width:350px;">
+															<div class="form-group" >
+																<input type="text" class="form-input" name="crAmount" id="crAmount" placeholder="23"  />
+															</div>
+														</td>
+														<td Style="padding-left: 20px;">
+															<p Style="font-weight: bold; "> Dr Amount: </p>
+														</td>
+														<td Style="width:350px;">
+															<div class="form-group" >
+																<input type="text" class="form-input" name="drAmount" id="drAmount" placeholder="5"  />
+															</div>
+														</td>
+														<td Style="padding-left: 20px;">
+															<p Style="font-weight: bold; "> Opening Year: </p>
+														</td>
+														<td Style="width:350px;">
+															<div class="form-group" >
+																<input type="text" class="form-input" name="opYear" id="opYear" placeholder="5"  />
+															</div>
+														</td>
+													</tr>
+												</table>
 												
 												<div class="form-group">
 													<input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>

@@ -196,7 +196,7 @@ echo '<script>alert("$name already exists")</script>';
 
 
 																				
-																				$re="SELECT * FROM `creategroup` ";
+																				$re="SELECT * FROM `tbledgeropeningbalance` ";
 																				$dl=mysqli_query($link,$re);
 																				while($row1=mysqli_fetch_array($dl))
 																				{
@@ -251,7 +251,7 @@ echo '<script>alert("$name already exists")</script>';
 												<form method="post" id="insert_form">
 													<div class="table-repsonsive">
 													 <span id="error"></span>
-													 <table class="table table-bordered" id="item_table">
+													 <table class="table table-bordered" id="item_table" Style="background-color: #00FFFF;">
 													  <tr>
 													   <th>Ledger Name</th>
 													   <th>Balance</th>
@@ -263,7 +263,9 @@ echo '<script>alert("$name already exists")</script>';
 															$link= mysqli_connect("localhost", "root", "");
 
 															mysqli_select_db($link,"alm");
-														$re="SELECT * FROM `createledger` ";
+														$re="SELECT ledgerId,((SELECT SUM(drAmount)- SUM(crAmount) FROM voucher1 WHERE `ledgerId` = ledgerId)
+														+(SELECT SUM(drAmount)- SUM(crAmount) FROM tbledgeropeningbalance WHERE `ledgerId` = ledgerId))Balance 
+														FROM `tbledgeropeningbalance` ";
 	
 															$dl=mysqli_query($link,$re);
 															
@@ -272,17 +274,18 @@ echo '<script>alert("$name already exists")</script>';
 															
 																echo"<tr>";
 																
-																$re2="SELECT * FROM `createledger` ";
+																$re2="SELECT * FROM `tbledgeropeningbalance` ";
 																$dl3=mysqli_query($link,$re2);
 																echo "<td><select class='form-control' name='CLedger' Style='width:350px;'>";
-																echo "<option > </option>";
+																
 																while($row2=mysqli_fetch_array($dl3))
 																{
+																	echo "<option > </option>";
 																	echo "<option value=". $row2['CLedger'].">". $row2['CLedger']."</option>";
 																}
 																echo "<select></td>";
 																
-																echo"<td>".$row1['MainGroup']."</td>";
+																echo"<td>".$row1['Balance']."</td>";
 																echo"<td><input type='text' class='form-input' name='DrAmount' id='DrAmount' placeholder='Dr Amount'/></td>";
 																
 																echo"</tr>";
