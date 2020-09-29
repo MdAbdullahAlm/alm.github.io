@@ -263,10 +263,9 @@ echo '<script>alert("$name already exists")</script>';
 															$link= mysqli_connect("localhost", "root", "");
 
 															mysqli_select_db($link,"alm");
-														$re="SELECT ledgerId,((SELECT SUM(drAmount)- SUM(crAmount) FROM voucher1 WHERE `ledgerId` = ledgerId)
-														+(SELECT SUM(drAmount)- SUM(crAmount) FROM tbledgeropeningbalance WHERE `ledgerId` = ledgerId))Balance 
-														FROM `tbledgeropeningbalance` ";
-	
+															$re="SELECT * FROM `tbledgeropeningbalance` ";
+															$re3="SELECT CLedger,(ifnull((SELECT (drAmount)- (crAmount) FROM voucher1 WHERE `ledgerId` = CLedger),0) + ifnull((SELECT sum(drAmount)- SUM(crAmount) FROM tbledgeropeningbalance WHERE `ledgerId` = CLedger),0))Balance2  FROM `createledger`";
+															
 															$dl=mysqli_query($link,$re);
 															
 															while($row1=mysqli_fetch_array($dl))
@@ -282,10 +281,11 @@ echo '<script>alert("$name already exists")</script>';
 																{
 																	echo "<option > </option>";
 																	echo "<option value=". $row2['CLedger'].">". $row2['CLedger']."</option>";
+																	
 																}
 																echo "<select></td>";
 																
-																echo"<td>".$row1['Balance']."</td>";
+																echo"<td>".$row2['Balance2']."</td>";
 																echo"<td><input type='text' class='form-input' name='DrAmount' id='DrAmount' placeholder='Dr Amount'/></td>";
 																
 																echo"</tr>";

@@ -21,13 +21,17 @@ $link= mysqli_connect("localhost", "root", "");
 
 mysqli_select_db($link,"alm");
 
-$CQSql=" Select CGroup,CLedger  from createledger where CGroup ='$CGroup' and CLedger = '$CLedger'";
+$CQSql=" Select opYear,CLedger  from createledger where opYear ='$opYear' and CLedger = '$CLedger'";
 $re1= mysqli_query($link,$CQSql);
 $count=mysqli_num_rows($re1);
 if($count == 0) {
 	$sql="INSERT INTO tbledgeropeningbalance( MainGroup, CGroup, ledgerId,crAmount, drAmount, opYear, userIp, entryTime)
 	VALUES ('$Group','$CGroup','$CLedger','$crAmount','$drAmount','$opYear','$userIp',CURRENT_TIMESTAMP)";
 $re= mysqli_query($link,$sql);
+
+$sql1="INSERT INTO createledger( MainGroup, CGroup, CLedger,crAmount, drAmount, opYear, userIp, entryTime)
+	VALUES ('$Group','$CGroup','$CLedger','$crAmount','$drAmount','$opYear','$userIp',CURRENT_TIMESTAMP)";
+$re1= mysqli_query($link,$sql1);
 
 echo '<script>alert("Sucssesfully Done")</script>'; 
 }
