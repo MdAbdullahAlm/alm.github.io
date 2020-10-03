@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 21, 2020 at 01:26 PM
+-- Generation Time: Oct 03, 2020 at 02:42 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.3.20
 
@@ -86,6 +86,62 @@ CREATE TABLE `class6to10` (
 INSERT INTO `class6to10` (`autoId`, `studentName`, `fatherName`, `motherName`, `presentAddress`, `permanentAddress`, `MobileNumber`, `class`, `previousSchool`, `email`, `file`, `teamService`, `userId`, `entryTime`) VALUES
 (1, 'roji', 'rana', 'rani', 'ctg', 'ctg', '1335462', 'korim@gmail.com', '', 'cda school', 'award.jpg', 'on', '', '2020-09-12 17:38:18'),
 (2, 'roji akter', 'rana', 'fgd', 'df', 'sd', '0163434', 'korim@gmail.com', '', 'cda school a', 'bg7.jpg', 'on', '', '2020-09-12 17:42:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `creategroup`
+--
+
+CREATE TABLE `creategroup` (
+  `autoId` int(33) NOT NULL,
+  `MainGroup` varchar(222) NOT NULL,
+  `CGroup` varchar(222) NOT NULL,
+  `UserIp` varchar(222) NOT NULL,
+  `entryTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `creategroup`
+--
+
+INSERT INTO `creategroup` (`autoId`, `MainGroup`, `CGroup`, `UserIp`, `entryTime`) VALUES
+(1, 'Income', 'Salary', 'localhost:8888', '2020-09-22 11:20:27'),
+(2, 'Liabilities', 'School Salary', 'localhost:8888', '2020-09-22 11:22:17'),
+(3, 'All', 'add', 'localhost:8888', '2020-09-22 11:22:23'),
+(4, 'All', 'dfsdfgvgr', 'localhost:8888', '2020-09-22 11:22:28'),
+(5, 'All', 'Salary', 'localhost:8888', '2020-09-22 11:24:05'),
+(6, 'Liabilities', 'dfsdfgvgrfjhk', 'localhost:8888', '2020-09-22 11:31:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `createledger`
+--
+
+CREATE TABLE `createledger` (
+  `autoId` int(33) NOT NULL,
+  `MainGroup` varchar(222) NOT NULL,
+  `CGroup` varchar(222) NOT NULL,
+  `CLedger` varchar(250) NOT NULL,
+  `crAmount` bigint(255) NOT NULL,
+  `drAmount` bigint(255) NOT NULL,
+  `opYear` year(4) NOT NULL,
+  `UserIp` varchar(222) NOT NULL,
+  `entryTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `createledger`
+--
+
+INSERT INTO `createledger` (`autoId`, `MainGroup`, `CGroup`, `CLedger`, `crAmount`, `drAmount`, `opYear`, `UserIp`, `entryTime`) VALUES
+(2, 'Liabilities', 'School Salary', 'b', 10, 110, 2020, 'localhost:8888', '2020-09-22 11:22:17'),
+(3, 'All', 'add', 'c', 212, 25, 2020, 'localhost:8888', '2020-09-22 11:22:23'),
+(4, 'All', 'dfsdfgvgr', 'd', 33, 0, 2020, 'localhost:8888', '2020-09-22 11:22:28'),
+(5, 'All', 'Salary', 'e', 55, 1, 2020, 'localhost:8888', '2020-09-22 11:24:05'),
+(6, 'Liabilities', 'dfsdfgvgrfjhk', 'f', 54, 23, 2020, 'localhost:8888', '2020-09-22 11:31:42'),
+(7, 'Assets', 't', 'g', 35, 32, 2020, 'localhost:8888', '2020-09-22 11:50:31');
 
 -- --------------------------------------------------------
 
@@ -283,7 +339,11 @@ INSERT INTO `studentinfo` (`autoId`, `studentName`, `fatherName`, `motherName`, 
 (32, 'korim', 'rana', 'rohima', 'ctg', 'ctg', '1335462', 'Class 7', 2, 'df@fd', '', '', '2020-09-19 12:57:54'),
 (33, 'as', 'df', 'dfgb', 'sdf', 'sfv', '75634', 'Class 7', 3, 'df@fd', '', '', '2020-09-19 12:58:17'),
 (34, 'f', 'd', 'ad', 'dg', 'as', '832', 'Class 7', 4, 'df@fd', '', '', '2020-09-19 12:58:42'),
-(35, 'korim a', 'rohim', 'rohimad', 'df', 'sd', '0163434 6', 'Class 7', 5, '5dgfg@dge', '', '', '2020-09-19 12:59:06');
+(35, 'korim a', 'rohim', 'rohimad', 'df', 'sd', '0163434 6', 'Class 7', 5, '5dgfg@dge', '', '', '2020-09-19 12:59:06'),
+(36, '', '', '', '', '', '', 'Class 1', 0, '', '', '', '2020-09-23 10:45:53'),
+(37, '', '', '', '', '', '', '', 0, '', '', '', '2020-09-28 16:57:49'),
+(38, 'loki', 'lokes', 'loksi', 'ctg', 'ctg', '', 'Class 1', 0, '', '', '', '2020-09-29 10:40:34'),
+(39, 'dkfd', 'dsf', 'sdf', 'fa', 'df', 'fds', 'Class 8', 0, 'dsg@dgfd', '', '', '2020-09-29 10:41:05');
 
 -- --------------------------------------------------------
 
@@ -308,6 +368,37 @@ INSERT INTO `tbcontact` (`autoId`, `User_Name`, `email`, `Comment`, `entryTime`)
 (2, 'korim', 'korim@gmail.com', 'sfdsa', '2020-09-13 10:45:59'),
 (3, 'korim@gmail.com', '', '', '2020-09-13 10:50:37'),
 (4, '', 'korim@gmail.com', '', '2020-09-13 10:59:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbledgeropeningbalance`
+--
+
+CREATE TABLE `tbledgeropeningbalance` (
+  `autoId` int(111) NOT NULL,
+  `MainGroup` varchar(500) NOT NULL,
+  `CGroup` varchar(500) NOT NULL,
+  `ledgerId` varchar(250) NOT NULL,
+  `drAmount` bigint(255) NOT NULL,
+  `crAmount` bigint(255) NOT NULL,
+  `OpYear` year(4) NOT NULL,
+  `userName` varchar(222) NOT NULL,
+  `userIp` varchar(222) NOT NULL,
+  `entryTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbledgeropeningbalance`
+--
+
+INSERT INTO `tbledgeropeningbalance` (`autoId`, `MainGroup`, `CGroup`, `ledgerId`, `drAmount`, `crAmount`, `OpYear`, `userName`, `userIp`, `entryTime`) VALUES
+(2, 'All', 'School Salary', 'b', 0, 20, 2020, 'alm', '10101010', '2020-09-28 16:19:51'),
+(4, 'Liabilities', 'dg', 'd', 0, 20, 2020, 'alm', '10101010', '2020-09-28 16:20:30'),
+(5, 'Liabilities', 'dsg', 'e', 60, 0, 2020, 'alm', '10101010', '2020-09-28 16:22:06'),
+(6, 'Assets', 'School Salary', 'f', 0, 30, 2020, 'alm', '10101010', '2020-09-28 16:22:23'),
+(7, 'Assets', 'jfg', 'g', 90, 0, 2020, 'alm', '10101010', '2020-09-28 16:22:35'),
+(13, 'Liabilities', 'School Salary', 'b', 2, 201, 2019, '', 'localhost:8888', '2020-09-29 11:20:21');
 
 -- --------------------------------------------------------
 
@@ -387,6 +478,43 @@ INSERT INTO `teacherinfo` (`autoId`, `studentName`, `fatherName`, `motherName`, 
 (5, 'korim a', 'rohim', 'rani', 'df', 'ctg', '0163434 6', 'S.S', 'alm@gmail.com', '', '', '2020-09-20 10:55:06'),
 (6, 'roji akter', 'rohim', 'rohimad', 'ctg', 'ctg', '75634', 'Math', '5dgfg@dge', '', '', '2020-09-20 10:57:12');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `voucher1`
+--
+
+CREATE TABLE `voucher1` (
+  `autoId` int(250) NOT NULL,
+  `voucherNo` varchar(222) NOT NULL,
+  `date` datetime NOT NULL,
+  `ledgerId` varchar(222) NOT NULL,
+  `Narration` varchar(500) NOT NULL,
+  `drAmount` bigint(255) NOT NULL,
+  `crAmount` bigint(255) NOT NULL,
+  `voucherType` varchar(300) NOT NULL,
+  `transactionWith` varchar(300) NOT NULL,
+  `costId` varchar(222) NOT NULL,
+  `chqClear` int(111) NOT NULL,
+  `attachBill` varchar(500) NOT NULL,
+  `attachChequBill` varchar(500) NOT NULL,
+  `UserIp` varchar(222) NOT NULL,
+  `userName` varchar(222) NOT NULL,
+  `entryTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `voucher1`
+--
+
+INSERT INTO `voucher1` (`autoId`, `voucherNo`, `date`, `ledgerId`, `Narration`, `drAmount`, `crAmount`, `voucherType`, `transactionWith`, `costId`, `chqClear`, `attachBill`, `attachChequBill`, `UserIp`, `userName`, `entryTime`) VALUES
+(2, '2', '2020-09-28 16:13:24', 'b', 'wfg', 0, 20, 'hjg', 'hm', '1', 1, '0', '0', '101010', 'alm', '2020-09-28 16:13:24'),
+(3, '3', '2020-09-28 16:13:56', 'c', 'wfg', 300, 0, 'hjg', 'hm', '1', 1, '0', '0', '101010', 'alm', '2020-09-28 16:13:56'),
+(4, '4', '2020-09-28 16:14:13', 'd', 'wfg', 0, 10, 'hjg', 'hm', '1', 1, '0', '0', '101010', 'alm', '2020-09-28 16:14:13'),
+(5, '5', '2020-09-28 16:14:32', 'e', 'wfg', 510, 0, 'hjg', 'hm', '1', 1, '0', '0', '101010', 'alm', '2020-09-28 16:14:32'),
+(6, '6', '2020-09-28 16:14:56', 'f', 'wfg', 0, 210, 'hjg', 'hm', '1', 1, '0', '0', '101010', 'alm', '2020-09-28 16:14:56'),
+(7, '7', '2020-09-28 16:15:26', 'g', 'wfg', 0, 120, 'hjg', 'hm', '1', 1, '0', '0', '101010', 'alm', '2020-09-28 16:15:26');
+
 --
 -- Indexes for dumped tables
 --
@@ -401,6 +529,18 @@ ALTER TABLE `class1to5`
 -- Indexes for table `class6to10`
 --
 ALTER TABLE `class6to10`
+  ADD PRIMARY KEY (`autoId`);
+
+--
+-- Indexes for table `creategroup`
+--
+ALTER TABLE `creategroup`
+  ADD PRIMARY KEY (`autoId`);
+
+--
+-- Indexes for table `createledger`
+--
+ALTER TABLE `createledger`
   ADD PRIMARY KEY (`autoId`);
 
 --
@@ -440,6 +580,12 @@ ALTER TABLE `tbcontact`
   ADD PRIMARY KEY (`autoId`);
 
 --
+-- Indexes for table `tbledgeropeningbalance`
+--
+ALTER TABLE `tbledgeropeningbalance`
+  ADD PRIMARY KEY (`autoId`);
+
+--
 -- Indexes for table `tblogininfo`
 --
 ALTER TABLE `tblogininfo`
@@ -458,6 +604,12 @@ ALTER TABLE `teacherinfo`
   ADD PRIMARY KEY (`autoId`);
 
 --
+-- Indexes for table `voucher1`
+--
+ALTER TABLE `voucher1`
+  ADD PRIMARY KEY (`autoId`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -472,6 +624,18 @@ ALTER TABLE `class1to5`
 --
 ALTER TABLE `class6to10`
   MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `creategroup`
+--
+ALTER TABLE `creategroup`
+  MODIFY `autoId` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `createledger`
+--
+ALTER TABLE `createledger`
+  MODIFY `autoId` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `examschdeule`
@@ -501,13 +665,19 @@ ALTER TABLE `staffinfo`
 -- AUTO_INCREMENT for table `studentinfo`
 --
 ALTER TABLE `studentinfo`
-  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `tbcontact`
 --
 ALTER TABLE `tbcontact`
   MODIFY `autoId` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbledgeropeningbalance`
+--
+ALTER TABLE `tbledgeropeningbalance`
+  MODIFY `autoId` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tblogininfo`
@@ -526,6 +696,12 @@ ALTER TABLE `tbreginfo`
 --
 ALTER TABLE `teacherinfo`
   MODIFY `autoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `voucher1`
+--
+ALTER TABLE `voucher1`
+  MODIFY `autoId` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
