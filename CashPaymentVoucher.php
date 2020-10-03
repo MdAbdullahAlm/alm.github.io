@@ -263,8 +263,8 @@ echo '<script>alert("$name already exists")</script>';
 															$link= mysqli_connect("localhost", "root", "");
 
 															mysqli_select_db($link,"alm");
-															$re="SELECT * FROM `tbledgeropeningbalance` ";
-															$re3="SELECT CLedger,(ifnull((SELECT (drAmount)- (crAmount) FROM voucher1 WHERE `ledgerId` = CLedger),0) + ifnull((SELECT sum(drAmount)- SUM(crAmount) FROM tbledgeropeningbalance WHERE `ledgerId` = CLedger),0))Balance2  FROM `createledger`";
+															$re="SELECT * FROM `createledger` ";
+															
 															
 															$dl=mysqli_query($link,$re);
 															
@@ -273,9 +273,9 @@ echo '<script>alert("$name already exists")</script>';
 															
 																echo"<tr>";
 																
-																$re2="SELECT * FROM `tbledgeropeningbalance` ";
+																$re2="SELECT * FROM `createledger` ";
 																$dl3=mysqli_query($link,$re2);
-																echo "<td><select class='form-control' name='CLedger' Style='width:350px;'>";
+																echo "<td><select class='form-control' name='CLedger' onchange='MyJavaScript(this)' Style='width:350px;'>";
 																
 																while($row2=mysqli_fetch_array($dl3))
 																{
@@ -285,7 +285,23 @@ echo '<script>alert("$name already exists")</script>';
 																}
 																echo "<select></td>";
 																
-																echo"<td>".$row2['Balance2']."</td>";
+																echo"<td><h5></h5></td>";
+																
+																?>
+																
+																<script>
+																function MyJavaScript(dropdown) { 
+																	var option_value = dropdown.options[dropdown.selectedIndex].value; 
+																	 var option_text = dropdown.options[dropdown.selectedIndex].text; 
+																	
+																	 $("h5").html(option_value);
+																	
+																
+																}
+																</script>
+																
+																
+																<?php
 																echo"<td><input type='text' class='form-input' name='DrAmount' id='DrAmount' placeholder='Dr Amount'/></td>";
 																
 																echo"</tr>";
@@ -298,7 +314,7 @@ echo '<script>alert("$name already exists")</script>';
 													 </div>
 													</div>
 												</form>
-																											 
+														<!--  $re3="SELECT CLedger,(ifnull((SELECT (drAmount)- (crAmount) FROM voucher1 WHERE `ledgerId` = CLedger),0) + ifnull((SELECT sum(drAmount)- SUM(crAmount) FROM tbledgeropeningbalance WHERE `ledgerId` = CLedger),0))Balance2  FROM `createledger`"; -->													 
 												
 												<div class="form-group">
 													<input type="text" class="form-input" name="Fathername" id="Fathername" placeholder="Father Name"/>
